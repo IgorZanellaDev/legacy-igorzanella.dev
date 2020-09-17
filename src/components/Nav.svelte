@@ -33,7 +33,7 @@
 	</div>
 	<div class="flex-col px-4 pb-2 {isOpen ? "flex" : "hidden"} sm:flex sm:flex-grow sm:flex-row sm:items-center sm:pb-0 sm:justify-center">
 		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment ? "" : "active"}" href=".">home</a>
-		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment === "projects" ? "active" : ""}" rel=prefetch href="proejcts">projects</a>
+		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment === "projects" ? "active" : ""}" rel=prefetch href="projects">projects</a>
 		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment === "articles" ? "active" : ""}" href="articles">articles</a>
 		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment === "about" ? "active" : ""}" href="about">about me</a>
 	</div>
