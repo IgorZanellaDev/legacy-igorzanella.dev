@@ -1,60 +1,39 @@
 <script>
+	import Logo from '../components/Logo.svelte';
+	import Icon from 'fa-svelte';
+	import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
+	import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+
 	export let segment;
+	let isOpen = false;
 </script>
 
 <style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
+	.nav-link {
+		@apply text-light transition-all duration-500 ease-in-out bg-dark py-1 px-2 rounded my-1;
 	}
 
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		float: left;
-	}
-
-	[aria-current] {
-		position: relative;
-		display: inline-block;
-	}
-
-	[aria-current]::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	}
-
-	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
+	.nav-link:hover, .nav-link.active {
+		@apply bg-light text-dark;
 	}
 </style>
 
-<nav>
-	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
-	</ul>
+<nav class="bg-dark w-full sm:flex sm:items-center sm:flex-col">
+	<div class="p-2 flex flex-row justify-between items-center sm:justify-center sm:flex-grow sm:w-full">
+		<div class="flex-grow px-2 mr-4 sm:max-w-md sm:h-full text-center">
+			<Logo/>
+		</div>
+		<div on:click={() => isOpen = !isOpen} class="sm:hidden m-2 flex items-center border-2 rounded-lg p-2 border-light cursor-pointer">
+			{#if !isOpen}
+				<Icon icon={faBars} class="h-4 w-4 text-light fill-current"/>
+			{:else}
+				<Icon icon={faTimes} class="h-4 w-4 text-light fill-current"/>
+			{/if}
+		</div>
+	</div>
+	<div class="flex-col px-4 pb-2 {isOpen ? "flex" : "hidden"} sm:flex sm:flex-grow sm:flex-row sm:items-center sm:pb-0 sm:justify-center">
+		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment ? "" : "active"}" href=".">home</a>
+		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment === "about" ? "active" : ""}" href="about">about</a>
+		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment === "blog" ? "active" : ""}" rel=prefetch href="blog">blog</a>
+	</div>
 </nav>
