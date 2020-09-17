@@ -10,7 +10,7 @@
 
 <style>
 	.nav-link {
-		@apply text-light transition-all duration-500 ease-in-out bg-dark py-1 px-2 rounded my-1;
+		@apply text-light transition-all duration-500 ease-in-out py-1 px-2 rounded my-1;
 	}
 
 	.nav-link:hover, .nav-link.active {
@@ -18,7 +18,7 @@
 	}
 </style>
 
-<nav class="bg-dark w-full sm:flex sm:items-center sm:flex-col">
+<nav class="w-full sm:flex sm:items-center sm:flex-col z-10">
 	<div class="p-2 flex flex-row justify-between items-center sm:justify-center sm:flex-grow sm:w-full">
 		<div class="flex-grow px-2 mr-4 sm:max-w-md sm:h-full text-center">
 			<Logo/>

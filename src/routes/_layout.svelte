@@ -2,6 +2,7 @@
 	import Nav from '../components/Nav.svelte';
 	import GlobalStyle from '../components/GlobalStyle.svelte';
 	import Footer from '../components/Footer.svelte';
+	import Background from '../components/Background.svelte';
 
 	export let segment;
 </script>
@@ -11,8 +12,10 @@
 <style>
 </style>
 
-<Nav {segment} />
-<main class="bg-light flex-grow">
+
+<Background/>
+<Nav {segment}/>
+<main class="flex-grow z-10">
 	<slot></slot>
 </main>
 <Footer/>
