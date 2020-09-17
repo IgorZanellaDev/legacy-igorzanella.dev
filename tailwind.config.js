@@ -22,6 +22,11 @@ module.exports = {
         'sans': ['Inter', ...defaultTheme.fontFamily.sans],
         'serif': [...defaultTheme.fontFamily.serif],
         'mono': [...defaultTheme.fontFamily.mono]
+      },
+      height: {
+        '1/2':"50%",
+        '5/6': '83.333333%',
+        '72': '18rem'
       }
     },
   },
