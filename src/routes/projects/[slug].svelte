@@ -14,51 +14,32 @@
 </script>
 
 <script>
+	import Tag from "../../components/Tag.svelte";
+	import Icon from 'fa-svelte';
+	import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 	export let project;
 </script>
 
-<style>
-	/*
-		By default, CSS is locally scoped to the component,
-		and any unused styles are dead-code-eliminated.
-		In this page, Svelte can't know which elements are
-		going to appear inside the {{{post.html}}} block,
-		so we have to use the :global(...) modifier to target
-		all elements inside .content
-	*/
-	.content :global(h2) {
-		font-size: 1.4em;
-		font-weight: 500;
-	}
-
-	.content :global(pre) {
-		background-color: #f9f9f9;
-		box-shadow: inset 1px 1px 5px rgba(0,0,0,0.05);
-		padding: 0.5em;
-		border-radius: 2px;
-		overflow-x: auto;
-	}
-
-	.content :global(pre) :global(code) {
-		background-color: transparent;
-		padding: 0;
-	}
-
-	.content :global(ul) {
-		line-height: 1.5;
-	}
-
-	.content :global(li) {
-		margin: 0 0 0.5em 0;
-	}
-</style>
-
 <svelte:head>
-	<title>{project.title}</title>
+	<title>{project.title} - igorzanella.dev</title>
 </svelte:head>
 
-<h1>{project.title}</h1>
-
-<div class='content'>
-	{@html project.html}
+<div class="md:max-w-3xl">
+	<h1 class="text-light text-2xl font-title pt-2 px-2">{project.title}</h1>
+	<div class="flex flex-row flex-grow-0 flex-wrap pb-2 px-2">
+		{#each project.tags as tag}
+			<Tag tag={tag} classes="mr-2 my-2"/>
+		{/each}
+	</div>
+	<img class="w-full h-40 object-cover mt-1" src="/img/projects/{project.image}" alt="{project.title}"/>
+	{#if project.link}
+		<h3 class="text-light text-lg pt-2 px-2">Link: <a href={project.link} class="text-accent underline">{project.link}</a></h3>
+	{/if}
+	{#if project.github}
+		<h3 class="text-light text-lg pt-2 px-2 align-middle"><Icon icon={faGithub} class="align-items mr-1"/>Code: <a href={project.github} class="text-accent underline">{project.title}</a></h3>
+	{/if}
+	<div class="p-2 flex flex-col">
+		{@html project.html}
+	</div>
 </div>
+
