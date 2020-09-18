@@ -15,7 +15,7 @@
 
 <Background/>
 <Nav {segment}/>
-<main class="flex-grow z-10">
+<main class="flex-grow z-10 flex flex-col items-center">
 	<slot></slot>
 </main>
 <Footer/>
