@@ -11,12 +11,42 @@ const projects = [
 	{
 		title: 'igorzanella.dev',
 		slug: 'igorzanella-dev',
-		tags: ['svelte', 'sapper', 'tailwind','postcss'],
+		tags: ['svelte', 'sapper', 'tailwind','postcss', 'animatecss'],
 		description: 'Just the website you are navigating on!',
 		image: "igorzanella-dev.jpg",
 		github: "https://github.com/ZanellaIgor/igorzanella.dev",
 		html: `
-
+			<h2 class="text-light text-xl font-title">Welcome to my website!</h2>
+			<p class="text-light">
+				Welcome to my website. I developed this website to use it as a portfolio and a tracker for my work activity.
+			</p>
+			<br/>
+			<h2 class="text-light text-xl font-title">Simple static website</h2>
+			<p class="text-light">
+				This is a static website based on Sapper, a framework powered by Svelte, which is a framework of JavaScript.
+				</br/>The project you can see on GitHub is then exported to be hosted.
+			</p>
+			<br/>
+			<h2 class="text-light text-xl font-title">CSS part</h2>
+			<p class="text-light">
+				The CSS is based on Tailwind CSS, a UI Toolkit, low-level CSS framework, it's different from usual CSS frameworks because it don't has a default theme and themed components.
+				<br/>It provides low-level utility classes that let you build completely custom designs, without working on CSS (or so).
+				<br/>It uses PostCSS which is a tool with different plugins, which let you create fast CSS files, purging (in my case) all the CSS classes i didn't use on the website, to create light CSS files.
+				<br/>Below you can see an example of an HTML title styled using Tailwind classes.
+			</p>
+			<code class="w-full bg-light rounded-lg text-dark p-2 mt-2">
+				<span class="text-purple-600">&lt;h1</span> <span class="text-orange-600">class=</span><span class="text-blue-600">"text-gray-800 text-2xl font-serif hover:underline md:text-6xl"></span>Title<span class="text-purple-600">&lt;/h1></span>
+			</code>
+			<br/>
+			<h2 class="text-light text-xl font-title">Animations</h2>
+			<p class="text-light">
+				For animations I used Svelte default libraries and animate.css, a good library with pre-made CSS animations.
+			</p>
+			<br/>
+			<h2 class="text-light text-xl font-title">Free Code</h2>
+			<p class="text-light">
+				I published the code of this website on my GitHub, to show you my skills. You can find it above.
+			</p>
 		`
 	},
 	{
@@ -43,8 +73,17 @@ const projects = [
 			<p class="text-light">
 				I worked on this website with Andrea Santoro, I worked on frontend and Andrea on backend.
 				<br/>We also helped each other with code debug and bug fixing.
-				<br/>The frontend is based on React, I used Bootstrap as CSS framework, with high customizations. For animations I used animate.css library.
-				<br/>The backend is based on node.js, we use mongoDB and passport as authentication middleware.
+			</p>
+			<br/>
+			<h2 class="text-light text-xl font-title">Frontend</h2>
+			<p class="text-light">
+				The frontend is based on React, I used Bootstrap as CSS framework, with high customizations. For animations I used animate.css library.
+			</p>	
+			<br/>
+			<h2 class="text-light text-xl font-title">Backend</h2>
+			<p class="text-light">
+				The backend is based on Node.js, we use mongoDB and Passport as authentication middleware.
+				<br/>The login is managed by backend using Discord, a famous VoIP service for gamers.
 			</p>
 			<br/>
 			<h2 class="text-light text-xl font-title">Future goals</h2>
