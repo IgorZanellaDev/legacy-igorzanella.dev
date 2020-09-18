@@ -34,7 +34,7 @@
         bootstrap: {
             name: "Bootstrap",
             color: "#563d7c",
-            color_dark: "#230a49",
+            color_dark: "#3d2463",
             text_color: "#efd6ff",
             link: "https://getbootstrap.com/",
         },
@@ -49,7 +49,7 @@
             name: "AWS",
             color: "#ff9900",
             color_dark: "#cc6600",
-            text_color: "#660000",
+            text_color: "#ffffcc",
             link: "https://aws.amazon.com/",
         },
         scss: {
@@ -70,7 +70,7 @@
             name: "PHP",
             color: "#8892bf",
             color_dark: "#555f8c",
-            text_color: "#222c59",
+            text_color: "#eef8ff",
             link: "https://www.php.net/",
         },
         openlitespeed: {
@@ -84,7 +84,7 @@
             name: "CloudFlare",
             color: "#f38020",
             color_dark: "#c04d00",
-            text_color: "#5a0000",
+            text_color: "#ffffb9",
             link: "https://www.cloudflare.com/",
         },
         postcss: {
@@ -92,15 +92,29 @@
             color: "#dd3a0a",
             color_dark: "#aa0700",
             text_color: "#ffffd6",
-            link: "https://www.cloudflare.com/",
+            link: "https://postcss.org/",
         },
         tailwind: {
             name: "TailwindCSS",
             color: "#38b2ac",
             color_dark: "#057f79",
             text_color: "#d1ffff",
-            link: "https://www.cloudflare.com/",
-        }
+            link: "https://tailwindcss.com",
+        },
+        googleads: {
+            name: "Google Ads",
+            color: "#1a73e8",
+            color_dark: "#0040b5",
+            text_color: "#b3ffff",
+            link: "https://ads.google.com",
+        },
+        animatecss: {
+            name: "animate.css",
+            color: "#f7d7b5",
+            color_dark: "#c4a482",
+            text_color: "#351C75",
+            link: "https://ads.google.com",
+        },
     }
 </script>
 
@@ -109,5 +123,5 @@
         background-color: {tags[tag].color};
         box-shadow: 0 .4em {tags[tag].color_dark}, 0 .5em rgba(0,0,0,.2);
     ">
-    <a href={tags[tag].link} target="_blank" rel="noopener" class="text-light p-2 decoration-none" style="color: {tags[tag].text_color}">{tags[tag].name}</a>
+    <a href={tags[tag].link} target="_blank" rel="noopener" class="text-light p-2 decoration-none text-sm" style="color: {tags[tag].text_color}">{tags[tag].name}</a>
 </div>
