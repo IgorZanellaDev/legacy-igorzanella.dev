@@ -1,5 +1,5 @@
 <script>
-    export let classes;
+    export let classes = "";
 </script>
 
 <style>
