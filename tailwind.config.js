@@ -8,6 +8,9 @@ module.exports = {
   purge: ['./src/**/*.svelte', './src/**/*.html'],
   theme: {
     extend: {
+      fontSize:{
+        '7xl': '5rem'
+      },
       maxHeight: {
         '0': '0'
       },
@@ -15,6 +18,7 @@ module.exports = {
         dark: "#1b1b1e",
         light: "#f4f5f6",
         primary: "#226ce0",
+        primaryDark: "#0039ad",
         secondary: "#0fa3b1",
         accent: "#faa916",
       },
@@ -25,9 +29,11 @@ module.exports = {
         'mono': [...defaultTheme.fontFamily.mono]
       },
       height: {
+        'hscreen': '50vh',
         '1/2': '50%',
         '5/6': '83.333333%',
-        '72': '18rem'
+        '72': '18rem',
+        '80': '22rem'
       },
       inset: {
         '2': ".5rem"
@@ -35,7 +41,7 @@ module.exports = {
     },
   },
   variants: {
-    inset: ['responsive', 'hover']
+    inset: ['responsive', 'hover'],
   },
   plugins: [],
 }
