@@ -24,14 +24,14 @@
 	<title>{project.title} - igorzanella.dev</title>
 </svelte:head>
 
-<div class="md:max-w-3xl">
+<div class="sm:max-w-4xl">
 	<h1 class="text-light text-2xl font-title pt-2 px-2">{project.title}</h1>
 	<div class="flex flex-row flex-grow-0 flex-wrap pb-2 px-2">
 		{#each project.tags as tag}
 			<Tag tag={tag} classes="mr-2 my-2"/>
 		{/each}
 	</div>
-	<img class="w-full h-40 object-cover mt-1" src="/img/projects/{project.image}" alt="{project.title}"/>
+	<img class="w-full h-40 object-cover mt-1 md:h-80" src="/img/projects/{project.image}" alt="{project.title}"/>
 	{#if project.link}
 		<h3 class="text-light text-lg pt-2 px-2">Link: <a href={project.link} class="text-accent underline">{project.link}</a></h3>
 	{/if}
