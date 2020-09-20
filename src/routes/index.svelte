@@ -1,6 +1,6 @@
 <script>
 	import Typewriter from '../components/Typewriter.svelte';
-	import { scrollto } from "svelte-scrollto";
+	import * as animateScroll from "svelte-scrollto";
 
 	import { animations as animations_wr } from '../components/stores.js';
 	import { colors } from '../assets/theme';
@@ -40,7 +40,7 @@
 				<p><span>I can build the </span><span class="text-accent">complete </span><span>web solution for your </span><span class="text-secondary">business</span><span>.</span></p>
 			</Typewriter>
 		</div>
-		<a on:click={() => animateScroll.scrollTo({element: '#services', offset: 100})} href="#services" class="mt-6 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg {!animations.home ? "visible animate__animated animate__fadeInUp" : "invisible"} text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
+		<a on:click={() => animateScroll.scrollTo({element: '#services', offset: -50})} href="#services" class="mt-6 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg {!animations.home ? "visible animate__animated animate__fadeInUp" : "invisible"} text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
 			Discover how
 		</a>
 	</div>
