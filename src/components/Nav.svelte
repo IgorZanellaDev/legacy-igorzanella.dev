@@ -18,7 +18,7 @@
 	}
 </style>
 
-<nav class="w-full sm:flex sm:items-center sm:flex-col z-10">
+<nav class="w-full sm:flex sm:items-center sm:flex-col z-20 {segment ? "" : "absolute"}">
 	<div class="p-2 flex flex-row justify-between items-center sm:justify-center sm:flex-grow sm:w-full">
 		<div class="flex-grow px-2 mr-4 sm:max-w-md sm:h-full text-center">
 			<a href="."><Logo/></a>
