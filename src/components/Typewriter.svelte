@@ -141,17 +141,17 @@
 	}
 
 	.cursor :global(.typing::after) {
-		content: '|';
+		content: '▌';
 		display: inline-block;
 		color: var(--cursor-color);
-		animation: cursorFade 1.25s infinite;
+		animation: cursorFade 1s infinite;
 	}
 </style>
 
 <div
 	class:cursor
-	style="--cursor-color: {typeof cursor === 'string' ? cursor : 'black'}; {hidden ? 'visibility:hidden' : ''}"
+	style="--cursor-color: {typeof cursor === 'string' ? cursor : 'black'}"
 	bind:this={node}
 >
-	<slot/>
+	<slot style="{hidden ? 'display:none' : ''}"/>
 </div>
