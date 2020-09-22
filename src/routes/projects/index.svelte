@@ -26,6 +26,7 @@
 	<div class="w-full flex flex-col items-center justify-center perspective-500">
 		{#each projects as project, i}
 			<button on:click={() => {project.clicked = true; animateOut = true; setTimeout(()=> goto('/projects/'+project.slug), 500)}} class="bg-light w-5/6 m-2 rounded-lg flex flex-col focus:outline-none sm:m-4 {i % 2 ? "sm:flex-row-reverse" : "sm:flex-row"} {animateOut ? project.clicked ? "fade-out-fwd z-50" : "fade-out" : "hover:vibrate-1"} sm:w-full">
+				<a class="hidden" href="/projects/{project.slug}">{project.slug}</a>
 				<img class="rounded-t-lg object-cover w-full h-48 object-center sm:flex-grow sm:w-1/2 sm:h-56 {i % 2 ? "sm:rounded-none sm:rounded-r-lg" : "sm:rounded-none sm:rounded-l-lg"}" src="img/projects/{project.image}" alt={project.title}/>
 				<div class="p-3 text-left">
 					<h2 class="font-semibold text-primary text-xl">{project.title}</h2>
