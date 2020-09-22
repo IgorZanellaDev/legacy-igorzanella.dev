@@ -18,9 +18,11 @@ module.exports = {
         dark: "#1b1b1e",
         light: "#f4f5f6",
         primary: "#226ce0",
-        primaryDark: "#0039ad",
+        primaryDark: "#0953c7",
         secondary: "#0fa3b1",
+        secondaryDark: "#008a98",
         accent: "#faa916",
+        accentDark: "#e19000"
       },
       fontFamily: {
         'sans': ['Inter', ...defaultTheme.fontFamily.sans],
