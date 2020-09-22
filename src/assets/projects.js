@@ -1,12 +1,3 @@
-// Ordinarily, you'd generate this data from markdown files in your
-// repo, or fetch them from a database of some kind. But in order to
-// avoid unnecessary dependencies in the starter template, and in the
-// service of obviousness, we're just going to leave it here.
-
-// This file is called `_posts.js` rather than `posts.js`, because
-// we don't want to create an `/blog/posts` route — the leading
-// underscore tells Sapper not to do that.
-
 const projects = [
 	{
 		title: 'igorzanella.dev',
@@ -138,4 +129,10 @@ projects.forEach(project => {
 	project.html = project.html.replace(/^\t{3}/gm, '');
 });
 
-export default projects;
+export function getProjectBySlug(slug){
+	return projects.filter(project => project.slug === slug)[0];
+}
+
+export function getProjects(){
+	return projects;
+}
