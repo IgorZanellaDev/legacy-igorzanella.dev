@@ -8,7 +8,10 @@
 
 <script>
 	import Tag from '../../components/Tag.svelte';
+	import { fade } from 'svelte/transition';
+	import { goto } from '@sapper/app';
 	export let projects;
+	let animateOut = false;
 </script>
 
 <style>
@@ -18,13 +21,13 @@
 	<title>Projects - igorzanella.dev</title>
 </svelte:head>
 
-<div class="p-2 sm:max-w-5xl">
+<div class="p-2 sm:max-w-5xl" in:fade={{duration: 300}} >
 	<h1 class="text-light text-3xl font-title">My <span class="text-primary">projects</span></h1>
-	<div class="w-full flex flex-col items-center justify-center">
+	<div class="w-full flex flex-col items-center justify-center perspective-500">
 		{#each projects as project, i}
-			<a href="/projects/{project.slug}" class="bg-light w-5/6 m-2 rounded-lg flex flex-col hover:pulsate-fwd sm:m-4 {i % 2 ? "sm:flex-row-reverse" : "sm:flex-row"} sm:w-full">
+			<button on:click={() => {project.clicked = true; animateOut = true; setTimeout(()=> goto('/projects/'+project.slug), 500)}} class="bg-light w-5/6 m-2 rounded-lg flex flex-col focus:outline-none sm:m-4 {i % 2 ? "sm:flex-row-reverse" : "sm:flex-row"} {animateOut ? project.clicked ? "fade-out-fwd z-50" : "fade-out" : "hover:vibrate-1"} sm:w-full">
 				<img class="rounded-t-lg object-cover w-full h-48 object-center sm:flex-grow sm:w-1/2 sm:h-56 {i % 2 ? "sm:rounded-none sm:rounded-r-lg" : "sm:rounded-none sm:rounded-l-lg"}" src="img/projects/{project.image}" alt={project.title}/>
-				<div class="p-3">
+				<div class="p-3 text-left">
 					<h2 class="font-semibold text-primary text-xl">{project.title}</h2>
 					<div class="flex flex-row flex-grow-0 flex-wrap -px-1">
 						{#each project.tags as tag}
@@ -33,7 +36,7 @@
 					</div>
 					<p class="mt-2">{project.description}</p>
 				</div>
-			</a>
+			</button>
 		{/each}
 	</div>
 </div>

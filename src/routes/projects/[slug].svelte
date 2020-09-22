@@ -17,6 +17,7 @@
 	import Tag from "../../components/Tag.svelte";
 	import Icon from 'fa-svelte';
 	import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+	import { fade } from 'svelte/transition';
 	export let project;
 </script>
 
@@ -24,7 +25,7 @@
 	<title>{project.title} - igorzanella.dev</title>
 </svelte:head>
 
-<div class="sm:max-w-4xl">
+<div class="sm:max-w-4xl" in:fade={{duration: 300}}>
 	<h1 class="text-light text-2xl font-title pt-2 px-2">{project.title}</h1>
 	<div class="flex flex-row flex-grow-0 flex-wrap pb-2 px-2">
 		{#each project.tags as tag}
