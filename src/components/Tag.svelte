@@ -1,6 +1,7 @@
 <script>
     export let tag;
     export let classes;
+    export let clickable = true;
 
     let tags = {
         react: {
@@ -115,6 +116,20 @@
             text_color: "#351C75",
             link: "https://ads.google.com",
         },
+        html: {
+            name: "HTML5",
+            color: "#f16528",
+            color_dark: "#e54d26",
+            text_color: "#fffff4",
+            link: "https://developer.mozilla.org/en/docs/Web/HTML/HTML5"
+        },
+        css: {
+            name: "CSS3",
+            color: "#33a4d5",
+            color_dark: "#136db0",
+            text_color: "#ccffff",
+            link: "https://developer.mozilla.org/en/docs/Web/CSS"
+        }
     }
 </script>
 
@@ -123,5 +138,5 @@
         background-color: {tags[tag].color};
         box-shadow: 0 .4em {tags[tag].color_dark}, 0 .5em rgba(0,0,0,.2);
     ">
-    <a href={tags[tag].link} target="_blank" rel="noopener" class="text-light p-2 decoration-none text-sm" style="color: {tags[tag].text_color}">{tags[tag].name}</a>
+    <a href={tags[tag].link} target="_blank" rel="noopener" class="text-light p-2 decoration-none text-sm {clickable ? "" : "pointer-events-none"}" style="color: {tags[tag].text_color}">{tags[tag].name}</a>
 </div>
