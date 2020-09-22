@@ -39,6 +39,7 @@
 
 	const typewriterEffect = async ({ currentNode, text }) => {
 		currentNode.textContent = ''
+		hidden = false
 		currentNode.classList.add('typing')
 		for (const letter of text) {
 			currentNode.textContent += letter
@@ -115,10 +116,9 @@
 	onMount(() => {
 		setTimeout(() =>{
 			if(active){
-			hidden = false;
-			getElements(node)
-			loop ? loopMode() : nonLoopMode()
-		} else hidden = false;
+				getElements(node)
+				loop ? loopMode() : nonLoopMode()
+			} else hidden = false;
 		}, delay)
 	})
 
@@ -150,8 +150,9 @@
 
 <div
 	class:cursor
+	class="{hidden ? "invisible" : "visible"}"
 	style="--cursor-color: {typeof cursor === 'string' ? cursor : 'black'}"
 	bind:this={node}
 >
-	<slot style="{hidden ? 'display:none' : ''}"/>
+	<slot/>
 </div>
