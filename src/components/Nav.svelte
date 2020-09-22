@@ -18,8 +18,8 @@
 	}
 </style>
 
-<nav class="w-full sm:flex sm:items-center sm:flex-col z-20 {segment ? "" : "absolute"}">
-	<div class="p-2 flex flex-row justify-between items-center sm:justify-center sm:flex-grow sm:w-full">
+<nav class="w-full sm:flex sm:items-center z-20 {segment ? "" : "absolute"} sm:flex-col">
+	<div class="p-2 flex flex-row justify-between items-center sm:justify-center sm:flex-grow sm:w-full sm:pt-5">
 		<div class="flex-grow px-2 mr-4 sm:max-w-md sm:h-full text-center">
 			<a href="."><Logo/></a>
 		</div>
@@ -31,7 +31,7 @@
 			{/if}
 		</div>
 	</div>
-	<div class="flex-col px-4 pb-2 {isOpen ? "flex" : "hidden"} sm:flex sm:flex-grow sm:flex-row sm:items-center sm:pb-0 sm:justify-center">
+	<div class="flex-col px-4 pb-2 {isOpen ? "flex" : "hidden"} {segment ? "" : "bg-dark sm:bg-transparent"} sm:flex sm:flex-grow sm:flex-row sm:items-center sm:pb-0 sm:justify-center">
 		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment ? "" : "active"}" href=".">home</a>
 		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment === "projects" ? "active" : ""}" rel=prefetch href="projects">projects</a>
 		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment === "articles" ? "active" : ""}" href="articles">articles</a>
