@@ -15,11 +15,11 @@
 	import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons/faProjectDiagram';
 	import { faUserCircle } from '@fortawesome/free-solid-svg-icons/faUserCircle';
 
-	let animations;
+	let animation_home = true;
 	let tw_interval = [50,60,70,80];
 
 	const animations_unsubscribe = animations_wr.subscribe((value) => {
-		animations = value;
+		animation_home = value.home;
 	});
 
 	function handleAnimationDone (){
@@ -36,12 +36,12 @@
 <div in:fade={{duration: 300}}>
 <div class="text-light flex flex-col items-center justify-center px-2 h-screen">
 	<div class="text-center text-4xl transition-all duration-300 sm:text-5xl lg:text-6xl xl:text-7xl">
-		<Typewriter cursor={colors.light} interval={tw_interval} cascade active={animations.home} on:done={handleAnimationDone}>
+		<Typewriter cursor={colors.light} interval={tw_interval} cascade active={animation_home} on:done={handleAnimationDone}>
 			<p class="font-title"><span>Hi! I'm </span><span class="text-primary">Igor Zanella</span><span>!</span></p>
 			<p><span>I can build the </span><span class="text-accent">complete </span><span>web solution for your </span><span class="text-secondary">business</span><span>.</span></p>
 		</Typewriter>
 	</div>
-	<a on:click={() => animateScroll.scrollTo({element: '#services', offset: -50})} href="#services" class="mt-6 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg {!animations.home ? "visible animate__animated animate__fadeInUp" : "invisible"} text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
+	<a on:click={() => animateScroll.scrollTo({element: '#services', offset: -50})} href="#services" class="mt-6 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg {!animation_home ? "visible animate__animated animate__fadeInUp" : "invisible"} text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
 		Discover how
 	</a>
 </div>
