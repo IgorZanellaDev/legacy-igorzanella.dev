@@ -12,7 +12,11 @@ module.exports = {
         '7xl': '5rem'
       },
       maxHeight: {
-        '0': '0'
+        '0': '0',
+        '16': '4rem',
+        '17': '4.25rem',
+        '64': '16rem',
+        'none': 'none',
       },
       colors: {
         dark: "#1b1b1e",
@@ -38,7 +42,10 @@ module.exports = {
         '80': '22rem'
       },
       inset: {
-        '2': ".5rem"
+        '2': '.5rem'
+      },
+      screens: {
+        'xs': {'raw': '(min-height: 795px) and (min-width: 350px)'}
       }
     },
   },
