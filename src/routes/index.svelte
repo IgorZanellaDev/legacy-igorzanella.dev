@@ -2,8 +2,9 @@
 	import Typewriter from '../components/Typewriter.svelte';
 	import * as animateScroll from "svelte-scrollto";
 	import { fade } from "svelte/transition";
+	import { onMount } from "svelte";
 
-	import { animations as animations_wr } from '../components/stores.js';
+	import { animations as animationsState } from '../components/stores.js';
 	import { colors } from '../assets/theme';
 	
 	import Icon from 'fa-svelte';
@@ -17,13 +18,18 @@
 
 	let animation_home = true;
 	let tw_interval = [50,60,70,80];
+	let mounted = false;
 
-	const animations_unsubscribe = animations_wr.subscribe((value) => {
+	onMount(() => {
+		mounted = true;
+	});
+
+	const animations_unsubscribe = animationsState.subscribe((value) => {
 		animation_home = value.home;
 	});
 
 	function handleAnimationDone (){
-		animations_wr.update((value) => {
+		animationsState.update((value) => {
 			return {...value, home: false}
 		});
 	}
@@ -41,9 +47,11 @@
 			<p><span>I can build the </span><span class="text-accent">complete </span><span>web solution for your </span><span class="text-secondary">business</span><span>.</span></p>
 		</Typewriter>
 	</div>
-	<a on:click={() => animateScroll.scrollTo({element: '#services', offset: -50})} href="#services" class="mt-6 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg {!animation_home ? "visible animate__animated animate__fadeInUp" : "invisible"} text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
-		Discover how
-	</a>
+	{#if mounted}
+		<button on:click={() => animateScroll.scrollTo({element: '#services', offset: -50})} class="mt-4 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg focus:outline-none {!animation_home ? "visible scale-in-center" : "invisible"} text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
+			Discover how
+		</button>
+	{/if}
 </div>
 <div class="mx-4 bg-light rounded-lg flex flex-col sm:flex-row sm:mx-10 sm:p-2" id="services">
 	<div class="flex flex-col py-4 px-5 flex-1">
