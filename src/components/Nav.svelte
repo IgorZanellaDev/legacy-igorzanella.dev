@@ -6,6 +6,7 @@
 
 	export let segment;
 	let isOpen = false;
+	let neverOpened = true;
 </script>
 
 <style>
@@ -18,12 +19,12 @@
 	}
 </style>
 
-<nav class="w-full sm:flex sm:items-center z-20 {segment ? "" : "absolute"} sm:flex-col">
+<nav class="w-full sm:flex sm:items-center z-20 {segment ? "" : "absolute"} transition-all duration-200 {isOpen ? "max-h-64" : "max-h-17"} sm:max-h-none sm:h-auto sm:flex-col">
 	<div class="p-2 flex flex-row justify-between items-center sm:justify-center sm:flex-grow sm:w-full sm:pt-5">
 		<div class="flex-grow px-2 mr-4 sm:max-w-md sm:h-full text-center">
 			<a href="."><Logo/></a>
 		</div>
-		<div on:click={() => isOpen = !isOpen} class="sm:hidden m-2 flex items-center border-2 rounded-lg p-2 border-light cursor-pointer">
+		<div on:click={() => {isOpen = !isOpen; neverOpened = false}} class="sm:hidden m-2 flex items-center border-2 rounded-lg p-2 border-light cursor-pointer">
 			{#if !isOpen}
 				<Icon icon={faBars} class="h-4 w-4 text-light fill-current"/>
 			{:else}
@@ -31,7 +32,7 @@
 			{/if}
 		</div>
 	</div>
-	<div class="flex-col px-4 pb-2 {isOpen ? "flex" : "hidden"} {segment ? "" : "bg-dark sm:bg-transparent"} sm:flex sm:flex-grow sm:flex-row sm:items-center sm:pb-0 sm:justify-center">
+	<div class="flex flex-col px-4 pb-2 {isOpen ? "scale-in-ver-top" : "hidden sm:flex"} {segment ? "" : "bg-dark xs:bg-transparent"} sm:flex-grow sm:flex-row sm:items-center sm:pb-0 sm:justify-center">
 		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment ? "" : "active"}" href=".">home</a>
 		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment === "projects" ? "active" : ""}" rel=prefetch href="projects">projects</a>
 		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 {segment === "articles" ? "active" : ""}" href="articles">articles</a>
