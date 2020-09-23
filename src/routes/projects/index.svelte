@@ -11,7 +11,7 @@
 	import { goto } from '@sapper/app';
 	export let projects;
 	let animate = false;
-
+	
 	function handleClick(i){
 		projects.forEach(project => {
 			project.clicked = false;
@@ -35,7 +35,7 @@
 	<title>Projects - igorzanella.dev</title>
 </svelte:head>
 
-<div class="p-2 sm:max-w-5xl" in:fade={{duration: 300}} >
+<div class="p-2 sm:max-w-5xl" in:fade={{duration: 300}}>
 	<h1 class="text-light text-3xl font-title">My <span class="text-primary">projects</span></h1>
 	<div class="w-full flex flex-col items-center justify-center perspective-500">
 		{#each projects as project, i}
