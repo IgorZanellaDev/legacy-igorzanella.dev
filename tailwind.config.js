@@ -41,6 +41,9 @@ module.exports = {
         '72': '18rem',
         '80': '22rem'
       },
+      width: {
+        '1/2-i': '50% !important'
+      },
       inset: {
         '2': '.5rem'
       },
