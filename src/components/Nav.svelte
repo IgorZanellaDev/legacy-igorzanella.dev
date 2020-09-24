@@ -19,7 +19,7 @@
 	}
 </style>
 
-<nav class="w-full sm:flex sm:items-center z-20 {segment ? "" : "absolute"} transition-all duration-200 {isOpen ? "max-h-64" : "max-h-17"} sm:max-h-none sm:h-auto sm:flex-col">
+<nav class="w-full sm:flex sm:items-center z-20 {segment ? "" : "absolute"} transition-all duration-500 {isOpen ? "max-h-64" : "max-h-17"} sm:max-h-none sm:h-auto sm:flex-col">
 	<div class="p-2 flex flex-row justify-between items-center sm:justify-center sm:flex-grow sm:w-full sm:pt-5">
 		<div class="flex-grow px-2 mr-4 sm:max-w-md sm:h-full text-center">
 			<a href="."><Logo/></a>
