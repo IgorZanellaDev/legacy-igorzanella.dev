@@ -12,7 +12,7 @@ const preprocess = require('svelte-preprocess')
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
-const preprocess = preprocess({
+const _preprocess = preprocess({
 	postcss: true,
 	...image(),
 });
@@ -35,7 +35,7 @@ export default {
 				dev,
 				hydratable: true,
 				emitCss: true,
-				preprocess: [preprocess]
+				preprocess: [_preprocess]
 			}),
 			resolve({
 				browser: true,
@@ -81,7 +81,7 @@ export default {
 				generate: 'ssr',
 				hydratable: true,
 				dev,
-				preprocess: [preprocess]
+				preprocess: [_preprocess]
 			}),
 			resolve({
 				dedupe: ['svelte']
