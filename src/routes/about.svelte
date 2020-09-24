@@ -3,23 +3,36 @@
 	import { animations as animationsState } from '../components/stores.js';
 
 	let age = ~~((Date.now() - new Date(Date.UTC(1998,1,2))) / (31557600000));
+	let about_animation = false;
+
+	const animationsUnsubscribe = animationsState.subscribe(value => {
+		about_animation = value.about;
+		if(about_animation){
+			setTimeout(() => animationsState.update(value => {return {...value, about: false}}), 3000);
+		}
+	})
 </script>
 
 <svelte:head>
 	<title>About - igorzanella.dev</title>
 </svelte:head>
 
-<div in:fade={{duration: 300}} class="flex flex-col justify-content-center items-center p-2 sm:max-w-4xl">
-	<div class="h-56 sm:flex-grow sm:flex sm:items-center sm:justify-center">
-		<img class="rounded-full object-cover object-top h-full w-auto roll-in-left" src="img/igor.jpeg" alt="Igor Zanella"/>
-	</div>
-	<div class="bg-white w-5/6 rounded-lg shadow-lg p-4 -mt-16 border-none bounce-in-bck sm:hidden">
-		<p class="text-center text-2xl font-bold text-primary">Igor Zanella</p>
-		<p class="text-center font-semibold text-secondary">Full Stack Developer</p>
-		<p class="text-center font-semibold text-secondary">Social Media Manager</p>
+<div in:fade={{duration: 300}} class="flex flex-col justify-center items-center p-2 md:max-w-4xl">
+	<div class="flex w-full items-center justify-center flex-col md:flex-row">
+		<div class="hidden w-full bg-light flex-col -mr-16 rounded-lg h-24 justify-center {about_animation ? "slide-in-elliptic-bottom-fwd-delay": ""} md:flex">
+			<h1 class="text-3xl font-title text-center text-dark">About <span class="text-primary">me</span></h1>
+		</div>
+		<div class="h-56 w-full flex flex-grow items-center justify-center">
+			<img class="rounded-full object-cover object-top h-full w-auto {about_animation ? "roll-in-left md:roll-in-left-delay" : ""} md:z-20" src="img/igor.jpeg" alt="Igor Zanella"/>
+		</div>
+		<div class="w-5/6 shadow-lg p-4 -mt-16 border-none h-24 bg-light flex flex-col justify-center rounded-lg {about_animation ? "bounce-in-bck-delay md:bounce-in-bck" : ""} md:w-full md:mt-0 md:-ml-16">
+			<p class="text-center text-2xl font-bold text-primary">Igor Zanella</p>
+			<p class="text-center font-semibold text-secondary">Full Stack Developer</p>
+			<p class="text-center font-semibold text-secondary">Social Media Manager</p>
+		</div>
 	</div>
 	<div class="self-start text-light p-2">
-		<h1 class="text-3xl font-title">About <span class="text-primary">me</span></h1>
+		<h1 class="text-3xl font-title md:hidden">About <span class="text-primary">me</span></h1>
 		<h2 class="text-2xl font-title">Who <span class="text-primary">I am</span>?</h2>
 		<p>Hi, I am Igor, I am Italian and {age} years old (yes, it's changing dynamically, you can check it on 2nd February😉). I love IT world, so I decided to become a freelancer, after more than 3 years as employee.</p>
 		<h2 class="text-2xl font-title mt-3 leading-tight">What are my previous <span class="text-primary">work experiences</span>?</h2>
