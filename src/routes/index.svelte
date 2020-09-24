@@ -17,6 +17,7 @@
 	import { faUserCircle } from '@fortawesome/free-solid-svg-icons/faUserCircle';
 
 	let animation_home = true;
+	let animation_home2 = true;
 	let tw_interval = [50,60,70,80];
 	let mounted = false;
 
@@ -26,12 +27,16 @@
 
 	const animations_unsubscribe = animationsState.subscribe((value) => {
 		animation_home = value.home;
+		animation_home2 = value.home2;
 	});
 
 	function handleAnimationDone (){
 		animationsState.update((value) => {
 			return {...value, home: false}
 		});
+		setTimeout(() => animationsState.update((value) => {
+			return {...value, home2: false}
+		}), 2000);
 	}
 </script>
 
@@ -48,7 +53,7 @@
 		</Typewriter>
 	</div>
 	{#if mounted}
-		<button on:click={() => animateScroll.scrollTo({element: '#services', offset: -50})} class="mt-4 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg focus:outline-none {!animation_home ? "visible scale-in-center" : "invisible"} text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
+		<button on:click={() => animateScroll.scrollTo({element: '#services', offset: -50})} class="mt-4 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg focus:outline-none {!animation_home ? animation_home2 ? "visible scale-in-center" : "visible" : "invisible"} text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
 			Discover how
 		</button>
 	{/if}
@@ -68,7 +73,6 @@
 		<p><Icon class="text-primary" icon={faCheck}/> <span class="text-primary">Google</span> and <span class="text-primary">Facebook</span> ads creation and management.</p>
 		<div class="mb-3"/>
 		<a href="projects" class="mt-auto bg-primary hover:bg-primaryDark transition-all duration-300 mb-1 px-4 py-2 rounded-lg text-light flex items-center justify-center sm:justify-start"><Icon class="text-light mr-2 text-xl" icon={faProjectDiagram}/>Check my projects</a>
-		<a href="#contact" class="bg-accent hover:bg-accentDark mb-1 px-4 py-2 rounded-lg text-light flex items-center justify-center sm:justify-start"><Icon class="text-light mr-2 text-xl" icon={faUserCircle}/>Contact me</a>
 	</div>
 	<div class="flex flex-col py-4 px-5 flex-1">
 		<Icon class="text-primary text-3xl self-center" icon={faRocket}/>
@@ -78,12 +82,14 @@
 		<p><Icon class="text-primary" icon={faCheck}/> Social management on <span class="text-primary">Facebook</span>, <span class="text-primary">Instagram</span>, <span class="text-primary">Twitter</span>, <span class="text-primary">YouTube</span> and <span class="text-primary">Twitch</span>.</p>
 		<p><Icon class="text-primary" icon={faCheck}/> Best <span class="text-primary">hashtags</span> listing.</p>
 		<p><Icon class="text-primary" icon={faCheck}/> Managing <span class="text-primary">organic growth</span>.</p>
-		<p><Icon class="text-primary" icon={faCheck}/> Social account advertising on <span class="text-primary">Google</span> and <span class="text-primary">Facebook/Instagram</span>.</p>
+		<p><Icon class="text-primary" icon={faCheck}/> Social media advertising on <span class="text-primary">Google</span> and <span class="text-primary">Facebook/Instagram</span>.</p>
 		<p><Icon class="text-primary" icon={faCheck}/> Basic <span class="text-primary">video editing</span>.</p>
 		<div class="mb-3"/>
 		<a href="projects" class="mt-auto bg-primary hover:bg-primaryDark transition-all duration-300 mb-1 px-4 py-2 rounded-lg text-light flex items-center justify-center sm:justify-start"><Icon class="text-light mr-2 text-xl" icon={faProjectDiagram}/>Check my projects</a>
 		<a href="articles" class="bg-secondary hover:bg-secondaryDark transition-all duration-300 mb-1 px-4 py-2 rounded-lg text-light flex items-center justify-center sm:justify-start"><Icon class="text-light mr-2 text-xl" icon={faNewspaper}/>Check my articles</a>
-		<a href="#contact" class="bg-accent hover:bg-accentDark transition-all duration-300 mb-1 px-4 py-2 rounded-lg text-light flex items-center justify-center sm:justify-start"><Icon class="text-light mr-2 text-xl" icon={faUserCircle}/>Contact me</a>
+	</div>
+	<div>
+		
 	</div>
 </div>
 </div>
