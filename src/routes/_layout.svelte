@@ -9,7 +9,7 @@
 
 	onMount(() => {
 		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-		(function(){
+		(async function(){
 			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 			s1.async=true;
 			s1.src='https://embed.tawk.to/5f5969184704467e89eda1f9/default';
