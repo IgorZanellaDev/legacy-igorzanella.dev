@@ -47,7 +47,7 @@
 </svelte:head>
 
 <div class="p-2 sm:px-6 w-full sm:max-w-5xl" in:fade={{duration: 300}}>
-	<h1 class="text-light text-3xl font-title">My <span class="text-primary">articles</span></h1>
+	<h1 class="text-light text-3xl font-title font-bold">My <span class="text-primary">articles</span></h1>
 	<div class="w-full flex flex-col items-center justify-center perspective-500">
 		{#each articles as article, i}
 			<button on:click={() => handleClick(i)} class="bg-light w-5/6 m-2 rounded-lg flex flex-col focus:outline-none sm:m-4 {i%2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"} {article.clicked && animate ? "fade-out-fwd z-50" : article.animateOut && animate ? "fade-out" : "hover:float-animation"} sm:w-full">

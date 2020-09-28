@@ -30,7 +30,7 @@ module.exports = {
       },
       fontFamily: {
         'sans': ['Inter', ...defaultTheme.fontFamily.sans],
-        'title': ['Raleway', ...defaultTheme.fontFamily.sans],
+        'title': ['Ubuntu','Raleway', ...defaultTheme.fontFamily.sans],
         'serif': [...defaultTheme.fontFamily.serif],
         'mono': [...defaultTheme.fontFamily.mono]
       },
