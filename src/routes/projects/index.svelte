@@ -47,7 +47,7 @@
 </svelte:head>
 
 <div class="p-2 sm:px-6 w-full sm:max-w-5xl" in:fade={{duration: 300}}>
-	<h1 class="text-light text-3xl font-title">My <span class="text-primary">projects</span></h1>
+	<h1 class="text-light text-3xl font-title font-bold">My <span class="text-primary">projects</span></h1>
 	<div class="w-full flex flex-col items-center justify-center perspective-500">
 		{#each projects as project, i}
 			<button on:click={() => handleClick(i)} class="bg-light w-5/6 m-2 rounded-lg flex flex-col focus:outline-none sm:m-4 {i%2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"} {project.clicked && animate ? "fade-out-fwd z-50" : project.animateOut && animate ? "fade-out" : "hover:float-animation"} sm:w-full">
@@ -64,5 +64,8 @@
 				</div>
 			</button>
 		{/each}
+		<div class="bg-light m-2 rounded-lg flex items-center w-5/6 sm:w-full px-6 py-4 {animate ? "fade-out": ""}">
+			<h3 class="text-center w-full text-xl">I didn't post all of my <span class="text-primary">projects</span>, <a href="TODO" class="text-accent underline">contact me</a> to discover the other ones.</h3>
+		</div>
 	</div>
 </div>
