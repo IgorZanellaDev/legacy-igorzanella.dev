@@ -5,24 +5,33 @@
 	import GlobalStyle from '../components/GlobalStyle.svelte';
 	import Footer from '../components/Footer.svelte';
 	import Background from '../components/Background.svelte';
+	import { stores } from '@sapper/app';
+  	const { page } = stores();
 
 	export let segment;
+	const max_tawk = 30;
+	let tawk_count = 0;
 
 	onMount(() => {
 		(function waitTawk(){
 			if(typeof window.Tawk_API !== "undefined" && typeof window.Tawk_API.getStatus() !== "undefined"){
 				if(window.Tawk_API.getStatus() === "online") chatOnline.set(true);
-			} else setTimeout(waitTawk, 100);
-		})();
-		(function(){
-			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-			s1.async=true;
-			s1.src='https://embed.tawk.to/5f5969184704467e89eda1f9/default';
-			s1.charset='UTF-8';
-			s1.setAttribute('crossorigin','*');
-			s0.parentNode.insertBefore(s1,s0);
+			} else if (tawk_count < max_tawk) {
+				setTimeout(() => {
+					waitTawk();
+					tawk_count++;
+				}, 100);
+			}
 		})();
 	});
+
+	$:{
+		if (typeof gtag !== "undefined"){
+			gtag("config", "UA-SOMEANALYTICSID-1", {
+				page_path: $page.path
+			});
+		}
+	}
 </script>
 
 <svelte:head>
