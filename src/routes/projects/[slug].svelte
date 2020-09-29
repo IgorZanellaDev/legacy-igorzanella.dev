@@ -11,6 +11,8 @@
 	import { faGithub } from '@fortawesome/free-brands-svg-icons';
 	import { faGlobeEurope } from '@fortawesome/free-solid-svg-icons';
 	import { fade } from 'svelte/transition';
+	import Image from "svelte-image";
+	
 	export let project;
 </script>
 

@@ -98,7 +98,7 @@ const projects = [
 				<br/>We won different races and leagues, national and international
 				<br/>We also organized some race and we created this website to organize the next events.
 			</p>
-			<img class="h-48 my-2 self-center md:h-64" src="img/projects/racinglinemotorsport/events.jpg">
+			<Image class="h-48 my-2 self-center md:h-64" src="img/projects/racinglinemotorsport/events.jpg">
 			<h2 class="text-light text-xl font-title font-bold">What did I do?</h2>
 			<p class="text-light">
 				I worked on this website with Andrea Santoro, I worked on frontend and Andrea on backend.
@@ -170,7 +170,7 @@ const projects = [
 				The business core is the affiliations, we create articles where we advice products (on Amazon or other Marketplaces), if the people buy these articles we earn a percentage of the order.
 				<br/> Below there is an example of an article.
 			</p>
-			<img class="h-48 my-2 self-center md:h-64" src="img/projects/bestondesk/articles.jpeg">
+			<Image class="h-48 my-2 self-center md:h-64" src="img/projects/bestondesk/articles.jpeg">
 			<h2 class="text-light text-xl font-title font-bold">What did I do?</h2>
 			<p class="text-light">
 				I created the website on Wordpress CMS using a prepackaged theme (I didn't have so much time because I was working as employee).
@@ -230,7 +230,7 @@ const projects = [
 			<p class="text-light">
 				Sim Racing is the term which indicates the auto racing simulation software, hardware and organizations. It has been around for a lot of time, but recently is growing exponentially.
 			</p>
-			<img class="h-48 my-2 self-center md:h-64" src="img/projects/igorzanella16/igorzanella16-audi.jpg">
+			<Image class="h-48 my-2 self-center md:h-64" src="img/projects/igorzanella16/igorzanella16-audi.jpg">
 			<h2 class="text-light text-xl font-title font-bold">What am I doing?</h2>
 			<p class="text-light">
 				I am training everyday to prepare online races and championships. During this I stream all the races on Twitch (also for endurances, like real 8h/12h/24h), and I do some tutorials, recaps and other things on Youtube.
@@ -243,7 +243,7 @@ const projects = [
 				<br/><br/>I also helped Matteo Cairoli on simulators with software, setups and races. He is (today) an official Porsche Driver, he took part and also won different championships. For example, he competed (as of today) in Porsche Supercup, World Endurance Championship, GT World Cup, 24h Le Mans, 24h Nurburging and much more.
 				<br/><br/>Last but not least, Fabrizio Crestani, he is actually helping us with our sim racing team with setups, driving coaching and much more. He competed in Formula 3, GP2, GT World Cup, and (as today) he is racing in International GT Open.
 			</p>
-			<img class="h-48 my-2 self-center md:h-64" src="img/projects/igorzanella16/igorzanella16-12h.jpg">
+			<Image class="h-48 my-2 self-center md:h-64" src="img/projects/igorzanella16/igorzanella16-12h.jpg">
 			<h2 class="text-light text-xl font-title font-bold">Future goals</h2>
 			<p class="text-light">
 				My goal with this project is to reach real racing world. I am creating a presence on social networks to offer it to future sponsors.
