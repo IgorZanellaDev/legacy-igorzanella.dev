@@ -129,6 +129,27 @@
             color_dark: "#136db0",
             text_color: "#ccffff",
             link: "https://developer.mozilla.org/en/docs/Web/CSS"
+        },
+        instagram: {
+            name: "Instagram",
+            color: "#405de6",
+            color_dark: "#0d2ab3",
+            text_color: "#d9f6ff",
+            link: "https://developer.mozilla.org/en/docs/Web/CSS"
+        },
+        youtube: {
+            name: "YouTube",
+            color: "#ff0000",
+            color_dark: "#cc0000",
+            text_color: "#fff",
+            link: "https://developer.mozilla.org/en/docs/Web/CSS"
+        },
+        twitch: {
+            name: "Twitch",
+            color: "#6441a4",
+            color_dark: "#310e71",
+            text_color: "#fff4ff",
+            link: "https://developer.mozilla.org/en/docs/Web/CSS"
         }
     }
 </script>
