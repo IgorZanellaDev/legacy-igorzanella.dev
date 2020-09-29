@@ -54,6 +54,6 @@
 		<p>As you can see on my projects I love adrenaline sports, motorsports in particular. In my spare time I train in martial arts (MMA and BJJ), I go snowboarding, enduro mountain biking, karting.</p>
 		<p class="mt-2">Follow me on my social if you are interested in this things!</p>
 		<h2 class="text-2xl font-title font-bold mt-3 leading-tight">Let's <span class="text-primary">speak</span>!</h2>
-		<p>We can speak on the chat you can find in this website. Or contact my by mail at <a href="/projects/bestondesk" class="text-accent underline">TODO MAIL</a>. I'm waiting for you!</p>
+		<p>We can speak on the chat you can find in this website. Or contact me by mail at <a href="mailto:hello@igorzanella.dev" class="text-accent underline">hello@igorzanella.dev</a>. I'm waiting for you!</p>
 	</div>
 </div> 

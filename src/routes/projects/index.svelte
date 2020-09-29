@@ -65,7 +65,7 @@
 			</button>
 		{/each}
 		<div class="bg-light m-2 rounded-lg flex items-center w-5/6 sm:w-full px-6 py-4 {animate ? "fade-out": ""}">
-			<h3 class="text-center w-full text-xl">I didn't post all of my <span class="text-primary">projects</span>, <a href="TODO" class="text-accent underline">contact me</a> to discover the other ones.</h3>
+			<h3 class="text-center w-full text-xl">I didn't post all of my <span class="text-primary">projects</span>, contact me at <a href="mailto:hello@igorzanella.dev" class="text-accent underline">hello@igorzanella.dev</a> to discover the other ones.</h3>
 		</div>
 	</div>
 </div>
