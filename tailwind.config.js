@@ -26,7 +26,9 @@ module.exports = {
         secondary: "#0fa3b1",
         secondaryDark: "#008a98",
         accent: "#faa916",
-        accentDark: "#e19000"
+        accentDark: "#e19000",
+        twitter: "#1da1f2",
+        linkedin: "#0077b5"
       },
       fontFamily: {
         'sans': ['Inter', ...defaultTheme.fontFamily.sans],
