@@ -33,8 +33,8 @@
 	</div>
 	<div class="flex flex-col px-4 pb-2 {isOpen ? "scale-in-ver-top" : "hidden sm:flex"} {segment ? "" : "bg-dark xs:bg-transparent"} sm:flex-grow sm:flex-row sm:items-center sm:pb-0 sm:justify-center">
 		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 sm:text-lg {segment ? "" : "active"}" href=".">home</a>
-		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 sm:text-lg {segment === "projects" ? "active" : ""} font-ubuntu" rel=prefetch href="projects">projects</a>
-		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 sm:text-lg {segment === "articles" ? "active" : ""} font-ubuntu" rel=prefetch href="articles">articles</a>
+		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 sm:text-lg {segment === "projects" ? "active" : ""} font-ubuntu" href="projects">projects</a>
+		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 sm:text-lg {segment === "articles" ? "active" : ""} font-ubuntu" href="articles">articles</a>
 		<a on:click={() => isOpen = false} class="nav-link sm:mx-2 sm:text-lg {segment === "about" ? "active" : ""} font-ubuntu" href="about">about me</a>
 	</div>
 </nav>
