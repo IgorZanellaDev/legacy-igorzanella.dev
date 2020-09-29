@@ -60,7 +60,7 @@ const projects = [
 				name: "Instagram",
 				user: "@racinglinemotorsport",
 				icon: faInstagram,
-				color: "#405de6",
+				color: "#e1306c",
 				link: "https://instagram.com/racinglinemotorsport"
 			},
 			{
@@ -146,7 +146,7 @@ const projects = [
 				name: "Instagram",
 				user: "@bestondesk",
 				icon: faInstagram,
-				color: "#405de6",
+				color: "#e1306c",
 				link: "https://www.instagram.com/bestondesk/"
 			},
 			{
@@ -201,7 +201,7 @@ const projects = [
 				name: "Instagram",
 				user: "@igorzanella16",
 				icon: faInstagram,
-				color: "#405de6",
+				color: "#e1306c",
 				link: "https://instagram.com/igorzanella16"
 			},
 			{
