@@ -5,3 +5,4 @@ export const animations = writable({
     home2: true,
     about: true,
 });
+export const chatOnline = writable(false);
