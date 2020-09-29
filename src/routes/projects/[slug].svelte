@@ -7,8 +7,9 @@
 
 <script>
 	import Tag from "../../components/Tag.svelte";
-	import Icon from 'fa-svelte';
-	import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+	import Fa from 'svelte-fa';
+	import { faGithub } from '@fortawesome/free-brands-svg-icons';
+	import { faGlobeEurope } from '@fortawesome/free-solid-svg-icons';
 	import { fade } from 'svelte/transition';
 	export let project;
 </script>
@@ -26,10 +27,15 @@
 	</div>
 	<img class="w-full h-40 object-cover mt-1 md:h-80" src="/img/projects/{project.image}" alt="{project.title}"/>
 	{#if project.link}
-		<h3 class="text-light text-lg pt-2 px-2">Link: <a href={project.link} class="text-accent underline">{project.link}</a></h3>
+		<h3 class="text-light text-xl pt-2 px-2 flex items-center"><Fa fw icon={faGlobeEurope} class="w-6 align-items mr-1"/>Link: <a href={project.link} class="text-accent underline ml-2">{project.link.replace("https://", "")}</a></h3>
 	{/if}
 	{#if project.github}
-		<h3 class="text-light text-lg pt-2 px-2 align-middle"><Icon icon={faGithub} class="align-items mr-1"/>Code: <a href={project.github} class="text-accent underline">{project.title}</a></h3>
+		<h3 class="text-light text-xl pt-2 px-2 flex items-center"><Fa fw icon={faGithub} class="w-6 align-items mr-1"/>GitHub: <a href={project.github} class="text-accent underline ml-2">{project.title}</a></h3>
+	{/if}
+	{#if project.socials}
+		{#each project.socials as social}
+			<p class="text-light px-2 text-xl flex items-center"><Fa fw class="w-6 mr-1" color={social.color} icon={social.icon}/>{social.name}:<a class="text-accent underline ml-2" target="_blank" rel="noopener noreferrer" href={social.link}>{social.user}</a></p>
+		{/each}
 	{/if}
 	<div class="p-2 flex flex-col">
 		{@html project.html}
