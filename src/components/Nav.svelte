@@ -1,8 +1,7 @@
 <script>
 	import Logo from '../components/Logo.svelte';
-	import Icon from 'fa-svelte';
-	import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
-	import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+	import Fa from 'svelte-fa';
+	import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 	export let segment;
 	let isOpen = false;
@@ -26,9 +25,9 @@
 		</div>
 		<div on:click={() => {isOpen = !isOpen; neverOpened = false}} class="sm:hidden m-2 flex items-center border-2 rounded-lg p-2 border-light cursor-pointer">
 			{#if !isOpen}
-				<Icon icon={faBars} class="h-4 w-4 text-light fill-current"/>
+				<Fa icon={faBars} class="h-4 w-4 text-light fill-current"/>
 			{:else}
-				<Icon icon={faTimes} class="h-4 w-4 text-light fill-current"/>
+				<Fa icon={faTimes} class="h-4 w-4 text-light fill-current"/>
 			{/if}
 		</div>
 	</div>
