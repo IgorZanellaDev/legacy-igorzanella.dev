@@ -12,7 +12,7 @@
 
 	let animation_home = true;
 	let animation_home2 = true;
-	let tw_interval = [50,60,70,80];
+	let tw_interval = [60,80,100];
 	let mounted = false;
 	let chatOnline = false;
 	var Tawk_API = {};
