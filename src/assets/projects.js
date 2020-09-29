@@ -1,3 +1,5 @@
+import { faInstagram, faYoutube, faTwitch, faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 const projects = [
 	{
 		title: 'igorzanella.dev',
@@ -46,6 +48,43 @@ const projects = [
 		tags: ['react', 'bootstrap', 'animatecss', 'node', 'mongodb', 'aws'],
 		description: 'Website crafted for my sim racing team.',
 		image: "racinglinemotorsport.jpg",
+		socials: [
+			{
+				name: "Facebook",
+				user: "Racing Line Motorsport",
+				icon: faFacebook,
+				color: "#1877f2",
+				link: "https://www.facebook.com/RacingLineMotorsport"
+			},
+			{
+				name: "Instagram",
+				user: "@racinglinemotorsport",
+				icon: faInstagram,
+				color: "#405de6",
+				link: "https://instagram.com/racinglinemotorsport"
+			},
+			{
+				name: "YouTube",
+				user: "Igor Zanella",
+				icon: faYoutube,
+				color: "#ff0000",
+				link: "https://youtube.com/channel/UCf2A-B-rWCJZqpiNmR9R35g"
+			},
+			{
+				name: "Twitch",
+				user: "igorzanella",
+				icon: faTwitch,
+				color: "#6441a4",
+				link: "https://twitch.tv/igorzanella"
+			},
+			{
+				name: "Twitter",
+				user: "RacingLiners",
+				icon: faTwitter,
+				color: "#1da1f2",
+				link: "https://twitter.com/RacingLiners"
+			}
+		],
 		link: 'https://racinglinemotorsport.com',
 		html: `
 			<h2 class="text-light text-xl font-title font-bold">What is Sim Racing?</h2>
@@ -77,6 +116,11 @@ const projects = [
 				<br/>The login is managed by backend using Discord, a famous VoIP service for gamers.
 			</p>
 			<br/>
+			<h2 class="text-light text-xl font-title font-bold">Social Media Manager</h2>
+			<p class="text-light">
+				In this team I am also the social media manager, I do not write posts, but only managing the Social Media team to work well, I am choosing the best strategy for reaching the best, and planning posts on different socials.
+			</p>
+			<br/>
 			<h2 class="text-light text-xl font-title font-bold">Future goals</h2>
 			<p class="text-light">
 				Our main goal is to grow as a team and organization. We will also do some real track days with some fantastic cars.
@@ -90,6 +134,29 @@ const projects = [
 		description: 'Website and business based on affiliations.',
 		image: "bestondesk.jpg",
 		link: 'https://bestondesk.com',
+		socials: [
+			{
+				name: "Facebook",
+				user: "BestOnDesk",
+				icon: faFacebook,
+				color: "#1877f2",
+				link: "https://www.facebook.com/bestondeskcom"
+			},
+			{
+				name: "Instagram",
+				user: "@bestondesk",
+				icon: faInstagram,
+				color: "#405de6",
+				link: "https://www.instagram.com/bestondesk/"
+			},
+			{
+				name: "Linkedin",
+				user: "BestOnDesk",
+				icon: faLinkedin,
+				color: "#0077b5",
+				link: "https://www.linkedin.com/company/bestondesk/"
+			},
+		],
 		html: `
 			<h2 class="text-light text-xl font-title font-bold">What is BestOnDesk?</h2>
 			<p class="text-light">
@@ -121,6 +188,67 @@ const projects = [
 				Obviously the main goal is to raise the earning from affiliations, to get more from this business.
 				<br/> Another goal is to become a reference point for employees and companies for growth advices.
 			</p>
+		`
+	},
+	{
+		title: 'Igor Zanella #16',
+		slug: 'igorzanella16',
+		tags: ['instagram', 'youtube', 'twitch'],
+		description: 'Social media project for sim racing',
+		image: "igorzanella16.jpg",
+		socials: [
+			{
+				name: "Instagram",
+				user: "@igorzanella16",
+				icon: faInstagram,
+				color: "#405de6",
+				link: "https://instagram.com/igorzanella16"
+			},
+			{
+				name: "YouTube",
+				user: "Igor Zanella",
+				icon: faYoutube,
+				color: "#ff0000",
+				link: "https://youtube.com/channel/UCf2A-B-rWCJZqpiNmR9R35g"
+			},
+			{
+				name: "Twitch",
+				user: "igorzanella",
+				icon: faTwitch,
+				color: "#6441a4",
+				link: "https://twitch.tv/igorzanella"
+			}
+		],
+		html: `
+			<h2 class="text-light text-xl font-title font-bold">What is Igor Zanella #16?</h2>
+			<p class="text-light">
+				This is my project on social networks for my sim racing "career".
+				<br/>I have different social accounts where I post photos and videos about my races, championships and training.
+			</p>
+			<br/>
+			<h2 class="text-light text-xl font-title font-bold">What is Sim Racing?</h2>
+			<p class="text-light">
+				Sim Racing is the term which indicates the auto racing simulation software, hardware and organizations. It has been around for a lot of time, but recently is growing exponentially.
+			</p>
+			<img class="h-48 my-2 self-center md:h-64" src="img/projects/igorzanella16/igorzanella16-audi.jpg">
+			<h2 class="text-light text-xl font-title font-bold">What am I doing?</h2>
+			<p class="text-light">
+				I am training everyday to prepare online races and championships. During this I stream all the races on Twitch (also for endurances, like real 8h/12h/24h), and I do some tutorials, recaps and other things on Youtube.
+				<br/>On Instagram, instead, I am offering news for my followers, for new races I am partecipating in.
+			</p>
+			<br/>
+			<h2 class="text-light text-xl font-title font-bold">What do I have achieved so far?</h2>
+			<p class="text-light">
+				I already met real racing world. For example I competed in 12h of Suzuka with David Fumanelli, a real PRO racing driver, which drove different racing car like Formula Renault, Formula 3 / GP3 and also in GT World Cup.
+				<br/><br/>I also helped Matteo Cairoli on simulators with software, setups and races. He is (today) an official Porsche Driver, he took part and also won different championships. For example, he competed (as of today) in Porsche Supercup, World Endurance Championship, GT World Cup, 24h Le Mans, 24h Nurburging and much more.
+				<br/><br/>Last but not least, Fabrizio Crestani, he is actually helping us with our sim racing team with setups, driving coaching and much more. He competed in Formula 3, GP2, GT World Cup, and (as today) he is racing in International GT Open.
+			</p>
+			<img class="h-48 my-2 self-center md:h-64" src="img/projects/igorzanella16/igorzanella16-12h.jpg">
+			<h2 class="text-light text-xl font-title font-bold">Future goals</h2>
+			<p class="text-light">
+				My goal with this project is to reach real racing world. I am creating a presence on social networks to offer it to future sponsors.
+			</p>
+			<br/>
 		`
 	},
 ];
