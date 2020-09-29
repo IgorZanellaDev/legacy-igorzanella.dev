@@ -54,7 +54,7 @@
 				<a class="hidden" href="/projects/{project.slug}">{project.slug}</a>
 				<Image wrapperClass="rounded-t-lg h-48 sm:w-1/2-i sm:h-56" class="w-full h-full object-cover object-center sm:rounded-none {i%2 === 0 ? "sm:rounded-l-lg" : "sm:rounded-r-lg"}" placeholderClass="w-full h-full object-cover object-center sm:rounded-none {i%2 === 0 ? "sm:rounded-l-lg" : "sm:rounded-r-lg"}" src="img/projects/{project.image}" alt={project.title}/>
 				<div class="p-3 text-left w-full sm:w-1/2 h-full">
-					<h2 class="font-semibold text-primary text-xl">{project.title}</h2>
+					<h2 class="font-title font-bold text-primary text-2xl">{project.title}</h2>
 					<div class="flex flex-row flex-grow-0 flex-wrap -px-1">
 						{#each project.tags as tag}
 							<Tag tag={tag} clickable={false} classes="mr-2 my-2"/>
