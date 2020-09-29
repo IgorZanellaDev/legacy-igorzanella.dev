@@ -55,14 +55,14 @@
 
 <div in:fade={{duration: 300}} class="overflow-hidden">
 	<div class="text-light flex flex-col items-center justify-center px-2 h-screen">
-		<div class="text-center text-4xl transition-all duration-300 sm:text-6xl lg:text-7xl">
+		<div class="text-center text-4xl transition-all duration-300 font-title font-bold sm:text-6xl lg:text-7xl">
 			<Typewriter cursor={colors.light} interval={tw_interval} cascade active={animation_home} on:done={handleAnimationDone}>
-				<p class="font-title font-bold slide"><span>Hi! I'm </span><span class="text-primary">Igor Zanella</span><span>!</span></p>
-				<p><span class="text-accent">Web </span><span>is my </span><span class="text-secondary">job</span><span>.</span></p>
+				<p class="slide"><span>Hi! I'm </span><span class="text-primary">Igor Zanella</span></p>
+				<p><span class="text-accent">Web </span><span>is my </span><span class="text-secondary">job</span></p>
 			</Typewriter>
 		</div>
 		{#if mounted}
-			<div class="flex mt-4">
+			<div class="flex mt-8">
 				<button on:click={() => animateScroll.scrollTo({element: '#services', offset: -50})} class="mx-4 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg focus:outline-none {!animation_home ? animation_home2 ? "visible scale-in-center" : "visible" : "invisible"} text-2xl sm:text-3xl lg:text-5xl">
 					What I do
 				</button>
