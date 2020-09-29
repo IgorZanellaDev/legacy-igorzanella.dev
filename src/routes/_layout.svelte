@@ -25,6 +25,10 @@
 	});
 </script>
 
+<svelte:head>
+	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Ubuntu:wght@400;500;700" rel="stylesheet">
+</svelte:head>
+
 <GlobalStyle/>
 
 <Background/>
