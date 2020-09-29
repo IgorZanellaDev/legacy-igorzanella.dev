@@ -15,7 +15,8 @@
 	let tw_interval = [60,80,100];
 	let mounted = false;
 	let chatOnline = false;
-	var Tawk_API = {};	const max_tawk = 30;
+	var Tawk_API = {};
+	const max_tawk = 30;
 	let tawk_count = 0;
 
 	onMount(() => {
@@ -62,8 +63,10 @@
 <div in:fade={{duration: 300}} class="overflow-hidden">
 	<div class="text-light flex flex-col items-center justify-center px-2 h-screen">
 		<div class="text-center text-4xl transition-all duration-300 font-title font-bold sm:text-6xl lg:text-7xl">
+			<Typewriter cursor={colors.light} interval={tw_interval} cascade active={animation_home} on:done={handleAnimationDone}>
 				<p class="slide"><span>Hi! I'm </span><span class="text-primary">Igor Zanella</span></p>
 				<p><span class="text-accent">Web </span><span>is my </span><span class="text-secondary">job</span></p>
+			</Typewriter>
 		</div>
 		{#if mounted}
 			<div class="flex mt-8">
