@@ -4,7 +4,7 @@ const projects = [
 	{
 		title: 'igorzanella.dev',
 		slug: 'igorzanella-dev',
-		tags: ['svelte', 'sapper', 'tailwind','postcss', 'animatecss'],
+		tags: ['svelte', 'sapper', 'tailwind','postcss', 'animatecss', 'netlify'],
 		description: 'Just the website you are navigating on!',
 		metaDescription: "The project of this website. Explaining what I used to do it. You can also find the GitHub public link and code examples.",
 		metaDescriptionCard: "Project of this website. Explaining how I developed it and public code.",

@@ -150,6 +150,13 @@
             color_dark: "#310e71",
             text_color: "#fff4ff",
             link: "https://developer.mozilla.org/en/docs/Web/CSS"
+        },
+        netlify:{
+            name: "Netlify",
+            color: "#009387",
+            color_dark: "#006054",
+            text_color: "#fff",
+            link: "https://www.netlify.com/"
         }
     }
 </script>
