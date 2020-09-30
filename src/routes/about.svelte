@@ -2,9 +2,13 @@
 	import { fade } from 'svelte/transition';
 	import { animations as animationsState } from '../components/stores.js';
 	import MetaTags from '../components/MetaTags.svelte';
+	import { onMount } from "svelte";
 
 	let age = ~~((Date.now() - new Date(Date.UTC(1998,1,2))) / (31557600000));
 	let about_animation = false;
+	let mounted = false;
+
+	onMount(() => mounted = true);
 
 	const animationsUnsubscribe = animationsState.subscribe(value => {
 		about_animation = value.about;
@@ -22,7 +26,7 @@
 />
 
 <div in:fade={{duration: 300}} class="flex flex-col justify-center items-center p-2 md:max-w-4xl">
-	<div class="flex w-full items-center justify-center flex-col md:flex-row">
+	<div class="flex w-full items-center justify-center flex-col md:flex-row {mounted ? "visible": "invisible"}">
 		<div class="hidden w-full bg-light flex-col -mr-16 rounded-lg h-24 justify-center {about_animation ? "slide-in-elliptic-bottom-fwd-delay": ""} md:flex">
 			<h1 class="text-3xl font-title font-bold text-center text-dark">About <span class="text-primary">me</span></h1>
 		</div>
