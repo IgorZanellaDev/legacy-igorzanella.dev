@@ -17,7 +17,7 @@
 	let mounted = false;
 	let chatOnline = false;
 	var Tawk_API = {};
-	const max_tawk = 30;
+	const max_tawk = 100;
 	let tawk_count = 0;
 
 	onMount(() => {

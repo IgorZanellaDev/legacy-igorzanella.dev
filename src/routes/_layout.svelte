@@ -9,7 +9,7 @@
   	const { page } = stores();
 
 	export let segment;
-	const max_tawk = 30;
+	const max_tawk = 100;
 	let tawk_count = 0;
 
 	onMount(() => {
