@@ -6,6 +6,8 @@ const projects = [
 		slug: 'igorzanella-dev',
 		tags: ['svelte', 'sapper', 'tailwind','postcss', 'animatecss'],
 		description: 'Just the website you are navigating on!',
+		metaDescription: "The project of this website. Explaining what I used to do it. You can also find the GitHub public link and code examples.",
+		metaDescriptionCard: "Project of this website. Explaining how I developed it and public code.",
 		image: "igorzanella-dev.jpg",
 		github: "https://github.com/ZanellaIgor/igorzanella.dev",
 		html: `
@@ -47,6 +49,8 @@ const projects = [
 		slug: 'racing-line-motorsport',
 		tags: ['react', 'bootstrap', 'animatecss', 'node', 'mongodb', 'aws'],
 		description: 'Website crafted for my sim racing team.',
+		metaDescription: "Racing Line Motorsport website, developed for my Sim Racing team. Case study and Social Media management.",
+		metaDescriptionCard: "My Sim Racing team website. Case study and Social Media management.",
 		image: "racinglinemotorsport.jpg",
 		socials: [
 			{
@@ -132,6 +136,8 @@ const projects = [
 		slug: 'bestondesk',
 		tags: ['wordpress', 'php', 'openlitespeed', 'aws', 'cloudflare', 'googleads'],
 		description: 'Website and business based on affiliations.',
+		metaDescription: "BestOnDesk, one of my businesses. An affiliate marketing based website. Discover the case study now!",
+		metaDescriptionCard: "BestOnDesk, one of my businesses. Discover the case study now!",
 		image: "bestondesk.jpg",
 		link: 'https://bestondesk.com',
 		socials: [
@@ -195,6 +201,8 @@ const projects = [
 		slug: 'igorzanella16',
 		tags: ['instagram', 'youtube', 'twitch'],
 		description: 'Social media project for sim racing',
+		metaDescription: "My social project for Sim Racing. Discover what are my social accounts and how I manage them.",
+		metaDescriptionCard: "Discover now my social networks project for Sim Racing. Follow me!",
 		image: "igorzanella16.jpg",
 		socials: [
 			{

@@ -1,6 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import { animations as animationsState } from '../components/stores.js';
+	import MetaTags from '../components/MetaTags.svelte';
 
 	let age = ~~((Date.now() - new Date(Date.UTC(1998,1,2))) / (31557600000));
 	let about_animation = false;
@@ -13,9 +14,12 @@
 	})
 </script>
 
-<svelte:head>
-	<title>About - igorzanella.dev</title>
-</svelte:head>
+<MetaTags
+	path = "about"
+	page = "about me"
+	description = "About me, you can find my experiences and why I decided to become a freelancer. Discover them now."
+	descriptionCard = "About me, my experiences and why I am a freelancer. Discover them now."
+/>
 
 <div in:fade={{duration: 300}} class="flex flex-col justify-center items-center p-2 md:max-w-4xl">
 	<div class="flex w-full items-center justify-center flex-col md:flex-row">

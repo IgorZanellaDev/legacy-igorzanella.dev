@@ -10,6 +10,7 @@
 	import { fade } from "svelte/transition";
 	import { goto } from "@sapper/app";
 	import Image from "svelte-image";
+	import MetaTags from "../components/MetaTags.svelte";
 
 	export let articles;
 	let animate;
@@ -42,9 +43,12 @@
 	}
 </style>
 
-<svelte:head>
-	<title>Articles - igorzanella.dev</title>
-</svelte:head>
+<MetaTags
+	path="articles"
+	page="articles"
+	description = "The articles I written. I love social networks and I like writing tutorials and guides online. Check out them now."
+	descriptionCard = "My articles, they are tutorials, guides and much more! Check them out now!"
+/>
 
 <div class="p-2 sm:px-6 w-full sm:max-w-5xl" in:fade={{duration: 300}}>
 	<h1 class="text-light text-3xl font-title font-bold">My <span class="text-primary">articles</span></h1>

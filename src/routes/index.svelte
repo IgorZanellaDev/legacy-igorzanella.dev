@@ -1,5 +1,6 @@
 <script>
 	import Typewriter from '../components/Typewriter.svelte';
+	import MetaTags from '../components/MetaTags.svelte';
 	import * as animateScroll from "svelte-scrollto";
 	import { fade } from "svelte/transition";
 	import { onMount } from "svelte";
@@ -56,27 +57,10 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Home - igorzanella.dev</title>
-	 <!-- Primary Meta Tags -->
-	<title>igorzanella.dev</title>
-	<meta name="title" content="igorzanella.dev">
-	<meta name="description" content="Hi, I am a web developer and social media manager. I work as a freelancer on commission, creating entire projects or giving advice on existing ones.">
-
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://igorzanella.netlify.app/">
-	<meta property="og:title" content="igorzanella.dev">
-	<meta property="og:description" content="Hi, I am a web developer and social media manager. I work as a freelancer on commission, creating entire projects or giving advice on existing ones.">
-	<meta property="og:image" content="https://igorzanella.netlify.app/img/meta-img.jpg">
-
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://igorzanella.netlify.app/">
-	<meta property="twitter:title" content="igorzanella.dev">
-	<meta property="twitter:description" content="Hi, I am a web developer and social media manager. I work as a freelancer on commission, creating entire projects or giving advice on existing ones.">
-	<meta property="twitter:image" content="https://igorzanella.netlify.app/img/meta-img.jpg">
-</svelte:head>
+<MetaTags
+	description = "Hi, I am a web developer and social media manager. I work as a freelancer on commission, creating entire projects or giving advice on existing ones." 
+	descriptionCard = "Web is my job. Freelance specialized in Web Developing and Social Media."
+/>
 
 <div in:fade={{duration: 300}} class="overflow-hidden">
 	<div class="text-light flex flex-col items-center justify-center px-2 h-screen">
