@@ -5,10 +5,6 @@
     let this_year = new Date().getFullYear();
 </script>
 
-<svelte:head>
-	<script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-</svelte:head>
-
 <div class="w-full flex flex-col justify-center p-3 z-10">
     <div class="mx-auto flex">
         <a href="https://twitter.com/IgorZanellaDev" target="_blank" rel="noopener noreferrer" class="text-light mx-2 flex items-center transition-all duration-300 hover:text-twitter"><Fa icon={faTwitterSquare} class="text-3xl sm:mr-1"/><span class="hidden sm:flex">Twitter</span></a>
