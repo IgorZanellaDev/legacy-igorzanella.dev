@@ -1,2 +1,4 @@
+Sitemap: https://igorzanella.dev/sitemap.xml
+
 User-agent: *
-Disallow: /
+Disallow:
