@@ -72,11 +72,11 @@
 		</div>
 		{#if mounted}
 			<div class="flex mt-8">
-				<button on:click={() => animateScroll.scrollTo({element: '#services', offset: -50})} class="mx-4 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg focus:outline-none {!animation_home ? animation_home2 ? "visible scale-in-center" : "visible" : "invisible"} text-2xl sm:text-3xl lg:text-5xl">
+				<button on:click={() => animateScroll.scrollTo({element: '#services', offset: -50})} class="mx-2 sm:mx-4 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg focus:outline-none {!animation_home ? animation_home2 ? "visible scale-in-center" : "visible" : "invisible"} text-2xl sm:text-3xl lg:text-5xl">
 					What I do
 				</button>
 				{#if chatOnline}
-					<button on:click={openChat} class="mx-4 bg-secondary hover:bg-secondaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg focus:outline-none {!animation_home ? animation_home2 ? "visible slide-in-blurred-br" : "visible" : "invisible"} text-2xl sm:text-3xl lg:text-5xl">
+					<button on:click={openChat} class="mx-2 sm:mx-4 bg-secondary hover:bg-secondaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg focus:outline-none {!animation_home ? animation_home2 ? "visible slide-in-blurred-br" : "visible" : "invisible"} text-2xl sm:text-3xl lg:text-5xl">
 						Chat with me
 					</button>
 				{/if}
