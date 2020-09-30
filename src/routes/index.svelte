@@ -23,7 +23,7 @@
 	onMount(() => {
 		mounted = true;
 		(function waitTawk(){
-			if(typeof window.Tawk_API !== "undefined" && typeof window.Tawk_API.onLoaded === "function"){
+			if(typeof window.Tawk_API !== "undefined" && typeof window.Tawk_API.maximize === "function"){
 				Tawk_API = window.Tawk_API;
 			} else if (tawk_count < max_tawk) {
 				setTimeout(() => {

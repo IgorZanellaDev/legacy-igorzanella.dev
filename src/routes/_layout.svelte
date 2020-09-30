@@ -14,7 +14,7 @@
 
 	onMount(() => {
 		(function waitTawk(){
-			if(typeof window.Tawk_API !== "undefined" && typeof window.Tawk_API.getStatus() !== "undefined"){
+			if(typeof window.Tawk_API !== "undefined" && typeof window.Tawk_API.getStatus === "function" && window.Tawk_API.getStatus()){
 				if(window.Tawk_API.getStatus() === "online") chatOnline.set(true);
 			} else if (tawk_count < max_tawk) {
 				setTimeout(() => {
