@@ -1,7 +1,7 @@
 <script>
     import { URL_SITE, DEFAULT_META_IMG, SITE_NAME } from "../components/env.js";
 
-    export let page, description, path;
+    export let page = "", description, path = "";
     export let type = "website";
     export let img = DEFAULT_META_IMG;
     export let descriptionCard = description;
