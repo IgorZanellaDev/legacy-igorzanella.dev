@@ -25,7 +25,7 @@
 	descriptionCard = "About me, my experiences and why I am a freelancer. Discover them now."
 />
 
-<div in:fade={{duration: 300}} class="flex flex-col justify-center items-center p-2 md:max-w-4xl">
+<div in:fade={{duration: 300}} class="flex flex-col justify-center items-center p-2 md:max-w-4xl overflow-hidden">
 	<div class="flex w-full items-center justify-center flex-col md:flex-row {mounted ? "visible": "invisible"}">
 		<div class="hidden w-full bg-light flex-col -mr-16 rounded-lg h-24 justify-center {about_animation ? "slide-in-elliptic-bottom-fwd-delay": ""} md:flex">
 			<h1 class="text-3xl font-title font-bold text-center text-dark">About <span class="text-primary">me</span></h1>
@@ -42,9 +42,9 @@
 	<div class="self-start text-light p-2">
 		<h1 class="text-3xl font-title font-bold md:hidden">About <span class="text-primary">me</span></h1>
 		<h2 class="text-2xl font-title font-bold">Who <span class="text-primary">am I</span>?</h2>
-		<p>Hi, I am Igor, I am Italian and {age} years old (yes, it's changing dynamically, you can check it on 2nd February 😉). I love IT world, so I decided to become a freelancer, after more than 3 years as an employee.</p>
+		<p>Hi, I am Igor, I am Italian and {age} years old (yes, it is changing dynamically, you can check it on 2nd February 😉). I love IT world, so I decided to become a freelancer, after more than 3 years as an employee.</p>
 		<h2 class="text-2xl font-title font-bold mt-3 leading-tight">What are my previous <span class="text-primary">work experiences</span>?</h2>
-		<p>I worked in 3 different branches of IT, I worked in IT security for some months, but it was shift work, also on weekends and it was not compatible with my other activities.</p>
+		<p>I worked in 3 different branches of IT, I have worked in IT security for some months, but it was shift work, also on weekends and it was not compatible with my other activities.</p>
 		<p class="mt-2">Then, I worked as a web developer, but I did not like the environment of the company where I was. I developed on web apps using Angular JS and Ionic, following directly entirely projects on my own.</p>
 		<p class="mt-2">The last job I did as an employee was the IT consultant, so I worked on hardware and virtual environments in companies. From virtual machines to network and security. And I learnt how to behave in companies.</p>
 		<h2 class="text-2xl font-title font-bold mt-3 leading-tight">Why I decided to became a <span class="text-primary">freelancer</span>?</h2>
