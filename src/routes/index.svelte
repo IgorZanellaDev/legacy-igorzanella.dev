@@ -1,3 +1,9 @@
+<script context="module">
+	export function preload({ params, query }) {
+	  return this.fetch("sitemap.xml");
+	}
+</script>
+
 <script>
 	import Typewriter from '../components/Typewriter.svelte';
 	import MetaTags from '../components/MetaTags.svelte';
