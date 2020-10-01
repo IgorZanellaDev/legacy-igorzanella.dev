@@ -1,6 +1,7 @@
 ![Logo](https://igorzanella.dev/stripe_logo.jpg)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e927bf7c-ac75-49a4-bdbc-24855a0c12b5/deploy-status)](https://app.netlify.com/sites/igorzanella/deploys)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/c4304c6f0a8e4d0b83068d9fcc7858a5)](https://www.codacy.com/gh/IgorZanellaDev/igorzanella.dev/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=IgorZanellaDev/igorzanella.dev&amp;utm_campaign=Badge_Grade)
 [![Code Grade](https://www.code-inspector.com/project/14241/status/svg)](https://badgen.net/uptime-robot/status/m786069333-7ec939dc519848ad07bc9c0c)
 [![Code Quality Score](https://www.code-inspector.com/project/14241/score/svg)](https://badgen.net/uptime-robot/status/m786069333-7ec939dc519848ad07bc9c0c)
 [![Uptime Robot Status](https://badgen.net/uptime-robot/status/m786069333-7ec939dc519848ad07bc9c0c)](https://badgen.net/uptime-robot/status/m786069333-7ec939dc519848ad07bc9c0c)
