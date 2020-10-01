@@ -1,11 +1,11 @@
-import { faInstagram, faYoutube, faTwitch, faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faYoutube, faTwitch, faFacebook, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const projects = [
 	{
-		title: 'igorzanella.dev',
-		slug: 'igorzanella-dev',
-		tags: ['svelte', 'sapper', 'tailwind','postcss', 'animatecss', 'netlify'],
-		description: 'Just the website you are navigating on!',
+		title: "igorzanella.dev",
+		slug: "igorzanella-dev",
+		tags: ["svelte", "sapper", "tailwind","postcss", "animatecss", "netlify"],
+		description: "Just the website you are navigating on!",
 		metaDescription: "The project of this website. Explaining what I used to do it. You can also find the GitHub public link and code examples.",
 		metaDescriptionCard: "Project of this website. Explaining how I developed it and public code.",
 		image: "igorzanella-dev.jpg",
@@ -24,9 +24,9 @@ const projects = [
 			<br/>
 			<h2 class="text-light text-xl font-title font-bold">CSS part</h2>
 			<p class="text-light">
-				The CSS is based on Tailwind CSS, a UI Toolkit, low-level CSS framework, it's different from usual CSS frameworks because it don't has a default theme and themed components.
+				The CSS is based on Tailwind CSS, a UI Toolkit, low-level CSS framework, it is different from usual CSS frameworks because it do not has a default theme and themed components.
 				<br/>It provides low-level utility classes that let you build completely custom designs, without working on CSS (or so).
-				<br/>It uses PostCSS which is a tool with different plugins, which let you create fast CSS files, purging (in my case) all the CSS classes i didn't use on the website, to create light CSS files.
+				<br/>It uses PostCSS which is a tool with different plugins, which let you create fast CSS files, purging (in my case) all the CSS classes i did not use on the website, to create light CSS files.
 				<br/>Below you can see an example of an HTML title styled using Tailwind classes.
 			</p>
 			<code class="w-full bg-light rounded-lg text-dark p-2 mt-2">
@@ -45,10 +45,10 @@ const projects = [
 		`
 	},
 	{
-		title: 'Racing Line Motorsport',
-		slug: 'racing-line-motorsport',
-		tags: ['react', 'bootstrap', 'animatecss', 'node', 'mongodb', 'aws'],
-		description: 'Website crafted for my sim racing team.',
+		title: "Racing Line Motorsport",
+		slug: "racing-line-motorsport",
+		tags: ["react", "bootstrap", "animatecss", "node", "mongodb", "aws"],
+		description: "Website crafted for my sim racing team.",
 		metaDescription: "Racing Line Motorsport website, developed for my Sim Racing team. Case study and Social Media management.",
 		metaDescriptionCard: "My Sim Racing team website. Case study and Social Media management.",
 		image: "racinglinemotorsport.jpg",
@@ -89,7 +89,7 @@ const projects = [
 				link: "https://twitter.com/RacingLiners"
 			}
 		],
-		link: 'https://racinglinemotorsport.com',
+		link: "https://racinglinemotorsport.com",
 		html: `
 			<h2 class="text-light text-xl font-title font-bold">What is Sim Racing?</h2>
 			<p class="text-light">
@@ -132,14 +132,14 @@ const projects = [
 		`
 	},
 	{
-		title: 'BestOnDesk',
-		slug: 'bestondesk',
-		tags: ['wordpress', 'php', 'openlitespeed', 'aws', 'cloudflare', 'googleads'],
-		description: 'Website and business based on affiliations.',
+		title: "BestOnDesk",
+		slug: "bestondesk",
+		tags: ["wordpress", "php", "openlitespeed", "aws", "cloudflare", "googleads"],
+		description: "Website and business based on affiliations.",
 		metaDescription: "BestOnDesk, one of my businesses. An affiliate marketing based website. Discover the case study now!",
 		metaDescriptionCard: "BestOnDesk, one of my businesses. Discover the case study now!",
 		image: "bestondesk.jpg",
-		link: 'https://bestondesk.com',
+		link: "https://bestondesk.com",
 		socials: [
 			{
 				name: "Facebook",
@@ -179,7 +179,7 @@ const projects = [
 			<Image class="h-48 my-2 self-center md:h-64" src="img/projects/bestondesk/articles.jpeg">
 			<h2 class="text-light text-xl font-title font-bold">What did I do?</h2>
 			<p class="text-light">
-				I created the website on Wordpress CMS using a prepackaged theme (I didn't have so much time because I was working as employee).
+				I created the website on Wordpress CMS using a prepackaged theme (I did not have so much time because I was working as employee).
 				<br/>The website is hosted on Amazon Web Services EC2 server, with OpenLiteSpeed web server. I used CloudFlare CDN.
 				<br/>I planned to transform the frontend to headless CMS, so I will recreate the new frontend using a JS framework like React or Svelte.
 			</p>
@@ -197,10 +197,10 @@ const projects = [
 		`
 	},
 	{
-		title: 'Igor Zanella #16',
-		slug: 'igorzanella16',
-		tags: ['instagram', 'youtube', 'twitch'],
-		description: 'Social media project for sim racing',
+		title: "Igor Zanella #16",
+		slug: "igorzanella16",
+		tags: ["instagram", "youtube", "twitch"],
+		description: "Social media project for sim racing",
 		metaDescription: "My social project for Sim Racing. Discover what are my social accounts and how I manage them.",
 		metaDescriptionCard: "Discover now my social networks project for Sim Racing. Follow me!",
 		image: "igorzanella16.jpg",
@@ -262,7 +262,7 @@ const projects = [
 ];
 
 projects.forEach(project => {
-	project.html = project.html.replace(/^\t{3}/gm, '');
+	project.html = project.html.replace(/^\t{3}/gm, "");
 });
 
 export function getProjectBySlug(slug){
