@@ -27,7 +27,7 @@
 
 	$:{
 		if (typeof gtag !== "undefined"){
-			gtag("config", "UA-SOMEANALYTICSID-1", {
+			gtag("config", "UA-177951155-1", {
 				page_path: $page.path
 			});
 		}
