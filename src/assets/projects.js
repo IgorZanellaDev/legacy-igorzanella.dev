@@ -266,7 +266,7 @@ projects.forEach((project) => {
 });
 
 export function getProjectBySlug(slug){
-	return projects.filter(project => project.slug === slug)[0];
+	return projects.filter((project) => project.slug === slug)[0];
 }
 
 export function getProjects(){
