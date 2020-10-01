@@ -6,7 +6,7 @@
     "dev": "sapper dev",
     "build": "NODE_ENV=production sapper build --legacy",
     "export": "NODE_ENV=production sapper export --legacy",
-    "netlify_export": "NODE_ENV=production sapper export --legacy --entry '/ /404'",
+    "netlify_export": "NODE_ENV=production sapper export --legacy --entry '/ /404' && mv __sapper__/export/404/index.html __sapper__/export/404.html",
     "start": "node __sapper__/build"
   },
   "dependencies": {
