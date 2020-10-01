@@ -6,9 +6,9 @@
 </script>
 
 <script>
-	import Tag from '../../components/Tag.svelte';
-	import { fade } from 'svelte/transition';
-	import { goto } from '@sapper/app';
+	import Tag from "../../components/Tag.svelte";
+	import { fade } from "svelte/transition";
+	import { goto } from "@sapper/app";
 	import Image from "svelte-image";
 	import MetaTags from "../../components/MetaTags.svelte";
 
@@ -27,7 +27,7 @@
 			}
 		});
 		animate = true;
-		setTimeout(() => goto('/projects/'+projects[i].slug), 400);
+		setTimeout(() => goto("/projects/"+projects[i].slug), 400);
 	}
 </script>
 

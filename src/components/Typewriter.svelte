@@ -1,106 +1,106 @@
 <script>
 	// Customized Typewriter component - https://www.npmjs.com/package/svelte-typewriter
-	import { onMount, createEventDispatcher, onDestroy } from 'svelte'
-	export let interval = 30
-	export let cascade = false
-	export let loop = false
-	export let cursor = true
-	export let active = true
-	export let delay = 0
+	import { onMount, createEventDispatcher, onDestroy } from "svelte";
+	export let interval = 30;
+	export let cascade = false;
+	export let loop = false;
+	export let cursor = true;
+	export let active = true;
+	export let delay = 0;
 	
-	let hidden = true
+	let hidden = true;
 
-	let node
-	let elements = []
+	let node;
+	let elements = [];
 
-	const dispatch = createEventDispatcher()
+	const dispatch = createEventDispatcher();
 
-	const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-	const rng = (min, max) => Math.floor(Math.random() * (max - min) + min)
-	const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
-	const typingInterval = async () => sleep(interval[rng(0, interval.length)] || interval)
+	const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+	const rng = (min, max) => Math.floor(Math.random() * (max - min) + min);
+	const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNodes[0].nodeType === 3;
+	const typingInterval = async () => sleep(interval[rng(0, interval.length)] || interval);
 
 	const getElements = parentElement => {
-		const treeWalker = document.createTreeWalker(parentElement, NodeFilter.SHOW_ELEMENT)
-		let currentNode = treeWalker.nextNode()
+		const treeWalker = document.createTreeWalker(parentElement, NodeFilter.SHOW_ELEMENT);
+		let currentNode = treeWalker.nextNode();
 		while (currentNode) {
-			const text = currentNode.textContent.split('')
-			hasSingleTextNode(currentNode) && elements.push({ currentNode, text })
-			currentNode = treeWalker.nextNode()
+			const text = currentNode.textContent.split('');
+			hasSingleTextNode(currentNode) && elements.push({ currentNode, text });
+			currentNode = treeWalker.nextNode();
 		}
 		if (hasSingleTextNode(node)) {
-			const text = node.textContent.split('')
-			node.textContent = ''
-			const childNode = document.createElement('p')
-			node.appendChild(childNode)
-			elements.push({ currentNode: childNode, text })
+			const text = node.textContent.split('');
+			node.textContent = '';
+			const childNode = document.createElement('p');
+			node.appendChild(childNode);
+			elements.push({ currentNode: childNode, text });
 		}
 	}
 
 	const typewriterEffect = async ({ currentNode, text }) => {
-		currentNode.textContent = ''
-		hidden = false
-		currentNode.classList.add('typing')
+		currentNode.textContent = '';
+		hidden = false;
+		currentNode.classList.add('typing');
 		for (const letter of text) {
-			currentNode.textContent += letter
-			const fullyWritten = loop && currentNode.textContent === text.join('')
+			currentNode.textContent += letter;
+			const fullyWritten = loop && currentNode.textContent === text.join('');
 			if (fullyWritten) {
-				dispatch('done')
-				await sleep(typeof loop === 'number' ? loop : 1500)
+				dispatch('done');
+				await sleep(typeof loop === 'number' ? loop : 1500);
 				while (currentNode.textContent !== '') {
-					currentNode.textContent = currentNode.textContent.slice(0, -1)
-					await typingInterval()
+					currentNode.textContent = currentNode.textContent.slice(0, -1);
+					await typingInterval();
 				}
-				return
+				return;
 			}
-			await typingInterval()
+			await typingInterval();
 		}
 		currentNode.classList.length == 1
 			? currentNode.removeAttribute('class')
-			: currentNode.classList.remove('typing')
+			: currentNode.classList.remove('typing');
 	}
 
 	const loopMode = async () => {
-		const loopParagraphTag = node.firstChild.tagName.toLowerCase()
-		const loopParagraph = document.createElement(loopParagraphTag)
-		node.childNodes.forEach(el => el.remove())
-		node.appendChild(loopParagraph)
+		const loopParagraphTag = node.firstChild.tagName.toLowerCase();
+		const loopParagraph = document.createElement(loopParagraphTag);
+		node.childNodes.forEach(el => el.remove());
+		node.appendChild(loopParagraph);
 		while (loop) {
 			for (const { currentNode, text } of elements) {
-				node.childNodes.forEach(el => el.remove())
-				const loopParagraphTag = currentNode.tagName.toLowerCase()
-				const loopParagraph = document.createElement(loopParagraphTag)
-				loopParagraph.textContent = text.join('')
-				node.appendChild(loopParagraph)
-				await typewriterEffect({ currentNode: loopParagraph, text })
-				node.childNodes.forEach(el => el.remove())
+				node.childNodes.forEach(el => el.remove());
+				const loopParagraphTag = currentNode.tagName.toLowerCase();
+				const loopParagraph = document.createElement(loopParagraphTag);
+				loopParagraph.textContent = text.join('');
+				node.appendChild(loopParagraph);
+				await typewriterEffect({ currentNode: loopParagraph, text });
+				node.childNodes.forEach(el => el.remove());
 			}
 		}
 	}
 
 	const nonLoopMode = async () => {
-		cascade && elements.forEach(({ currentNode }) => (currentNode.textContent = ''))
+		cascade && elements.forEach(({ currentNode }) => (currentNode.textContent = ''));
 		for (const element of elements) {
-			cascade ? await typewriterEffect(element) : typewriterEffect(element)
+			cascade ? await typewriterEffect(element) : typewriterEffect(element);
 		}
 
 		if (cascade) {
-			dispatch('done')
+			dispatch('done');
 		} else {
 			const { currentNode: lastElementToFinish } = elements.reduce(
 				(longestTextElement, element) => {
-					const longestTextLength = longestTextElement.text.length
+					const longestTextLength = longestTextElement.text.length;
 					return element.text.length > longestTextLength
 						? (longestTextElement = element)
-						: longestTextElement
+						: longestTextElement;
 				}
 			)
 
 			const observer = new MutationObserver(mutations => {
 				mutations.forEach(mutation => {
-					const lastElementFinishedTyping = !mutation.target.classList.contains('typing')
+					const lastElementFinishedTyping = !mutation.target.classList.contains('typing');
 					if (mutation.type === 'attributes' && lastElementFinishedTyping) {
-						dispatch('done')
+						dispatch('done');
 					}
 				})
 			})
@@ -116,13 +116,13 @@
 	onMount(() => {
 		setTimeout(() =>{
 			if(active){
-				getElements(node)
-				loop ? loopMode() : nonLoopMode()
+				getElements(node);
+				loop ? loopMode() : nonLoopMode();
 			} else hidden = false;
-		}, delay)
+		}, delay);
 	})
 
-	onDestroy(() => (loop = false))
+	onDestroy(() => (loop = false));
 </script>
 
 <style>

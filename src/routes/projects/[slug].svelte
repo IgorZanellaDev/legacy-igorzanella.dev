@@ -7,10 +7,10 @@
 
 <script>
 	import Tag from "../../components/Tag.svelte";
-	import Fa from 'svelte-fa';
-	import { faGithub } from '@fortawesome/free-brands-svg-icons';
-	import { faGlobeEurope } from '@fortawesome/free-solid-svg-icons';
-	import { fade } from 'svelte/transition';
+	import Fa from "svelte-fa";
+	import { faGithub } from "@fortawesome/free-brands-svg-icons";
+	import { faGlobeEurope } from "@fortawesome/free-solid-svg-icons";
+	import { fade } from "svelte/transition";
 	import Image from "svelte-image";
 	import MetaTags from "../../components/MetaTags.svelte";
 	

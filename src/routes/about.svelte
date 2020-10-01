@@ -1,7 +1,7 @@
 <script>
-	import { fade } from 'svelte/transition';
-	import { animations as animationsState } from '../components/stores.js';
-	import MetaTags from '../components/MetaTags.svelte';
+	import { fade } from "svelte/transition";
+	import { animations as animationsState } from "../components/stores.js";
+	import MetaTags from "../components/MetaTags.svelte";
 	import { onMount } from "svelte";
 
 	let age = ~~((Date.now() - new Date(Date.UTC(1998,1,2))) / (31557600000));

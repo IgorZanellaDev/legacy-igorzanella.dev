@@ -1,7 +1,7 @@
 <script>
-	import Logo from '../components/Logo.svelte';
-	import Fa from 'svelte-fa';
-	import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+	import Logo from "../components/Logo.svelte";
+	import Fa from "svelte-fa";
+	import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 	export let segment;
 	let isOpen = false;

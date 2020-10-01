@@ -1,11 +1,11 @@
 <script>
-	import { onMount } from 'svelte';
-	import { chatOnline } from '../components/stores.js';
-	import Nav from '../components/Nav.svelte';
-	import GlobalStyle from '../components/GlobalStyle.svelte';
-	import Footer from '../components/Footer.svelte';
-	import Background from '../components/Background.svelte';
-	import { stores } from '@sapper/app';
+	import { onMount } from "svelte";
+	import { chatOnline } from "../components/stores.js";
+	import Nav from "../components/Nav.svelte";
+	import GlobalStyle from "../components/GlobalStyle.svelte";
+	import Footer from "../components/Footer.svelte";
+	import Background from "../components/Background.svelte";
+	import { stores } from "@sapper/app";
   	const { page } = stores();
 
 	export let segment;

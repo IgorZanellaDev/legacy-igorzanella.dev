@@ -1,6 +1,6 @@
 <script>
-    import { onMount } from 'svelte';
-    import { colors } from '../assets/theme.js';
+    import { onMount } from "svelte";
+    import { colors } from "../assets/theme.js";
 
     onMount(() => {
         const canvas = document.getElementById("canvas-bg");

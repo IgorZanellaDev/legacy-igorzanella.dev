@@ -1,5 +1,5 @@
 <script>
-    import Fa from 'svelte-fa';
+    import Fa from "svelte-fa";
     import { faTwitterSquare, faDev, faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
     let this_year = new Date().getFullYear();

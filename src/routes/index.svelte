@@ -1,15 +1,15 @@
 <script>
-	import Typewriter from '../components/Typewriter.svelte';
-	import MetaTags from '../components/MetaTags.svelte';
+	import Typewriter from "../components/Typewriter.svelte";
+	import MetaTags from "../components/MetaTags.svelte";
 	import * as animateScroll from "svelte-scrollto";
 	import { fade } from "svelte/transition";
 	import { onMount } from "svelte";
 
-	import { animations as animationsState, chatOnline as chatOnlineState } from '../components/stores.js';
-	import { colors } from '../assets/theme';
+	import { animations as animationsState, chatOnline as chatOnlineState } from "../components/stores.js";
+	import { colors } from "../assets/theme";
 	
-	import Fa from 'svelte-fa';
-	import { faMobileAlt, faRocket, faCheck, faNewspaper, faProjectDiagram, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+	import Fa from "svelte-fa";
+	import { faMobileAlt, faRocket, faCheck, faNewspaper, faProjectDiagram, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 
 	let animation_home = true;
 	let animation_home2 = true;
@@ -72,7 +72,7 @@
 		</div>
 		{#if mounted}
 			<div class="flex mt-8">
-				<button on:click={() => animateScroll.scrollTo({element: '#services', offset: -50})} class="mx-2 sm:mx-4 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg focus:outline-none {!animation_home ? animation_home2 ? "visible scale-in-center" : "visible" : "invisible"} text-2xl sm:text-3xl lg:text-5xl">
+				<button on:click={() => animateScroll.scrollTo({element: "#services", offset: -50})} class="mx-2 sm:mx-4 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer px-4 py-2 rounded-lg focus:outline-none {!animation_home ? animation_home2 ? "visible scale-in-center" : "visible" : "invisible"} text-2xl sm:text-3xl lg:text-5xl">
 					What I do
 				</button>
 				{#if chatOnline}
