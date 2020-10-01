@@ -1,4 +1,4 @@
-const preprocess = require('svelte-preprocess')
+const preprocess = require("svelte-preprocess");
 import image from "svelte-image";
 
 module.exports = {
@@ -6,4 +6,4 @@ module.exports = {
 		postcss: true,
 		...image(),
 	}),
-}
+};

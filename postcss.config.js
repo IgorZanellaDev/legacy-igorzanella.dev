@@ -1,5 +1,5 @@
-const mode = process.env.NODE_ENV
-const dev = mode === 'development'
+const mode = process.env.NODE_ENV;
+const dev = mode === "development";
 
 module.exports = {
 	plugins: [
@@ -18,4 +18,4 @@ module.exports = {
 				preset: ['default', { discardComments: { removeAll: true } }],
 			}),
 	],
-}
+};

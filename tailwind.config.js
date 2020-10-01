@@ -58,4 +58,4 @@ module.exports = {
     inset: ['responsive', 'hover'],
   },
   plugins: [],
-}
+};

@@ -261,7 +261,7 @@ const projects = [
 	},
 ];
 
-projects.forEach(project => {
+projects.forEach((project) => {
 	project.html = project.html.replace(/^\t{3}/gm, "");
 });
 
