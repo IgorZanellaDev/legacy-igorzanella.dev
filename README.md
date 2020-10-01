@@ -20,7 +20,7 @@ I think I will re-use it in the future, but not for important projects.
 ## 🖌️ Tailwind CSS
 I use Tailwind CSS for graphics part, it is not like Bootstrap, Bulma, etc, because it does not have a default theme or predesigned components.
 \
-It is composed by a lot of low-level CSS classes which let you concentrate only HTML without writing CSS (or so, I wrote about 3-4 lines in the whole project).
+It is composed by a lot of low-level CSS classes which let you concentrate only HTML without writing CSS (or so, I wrote about 3-4 lines in the whole project, without counting animations).
 \
 It is good for little projects and simple styles, but I think it creates a bit of confusion on HTML. This is a personal opinion, there is not accounting for taste.
 \
