@@ -157,6 +157,20 @@
             color_dark: "#006054",
             text_color: "#fff",
             link: "https://www.netlify.com/"
+        },
+        javascript:{
+            name: "Javascript",
+            color: "#f0db4e",
+            color_dark: "#bda81b",
+            text_color: "#240f00",
+            link: "https://developer.mozilla.org/it/docs/Web/JavaScript"
+        },
+        canvas:{
+            name: "Canvas",
+            color: "#009387",
+            color_dark: "#006054",
+            text_color: "#fff",
+            link: "https://developer.mozilla.org/it/docs/Web/HTML/Canvas"
         }
     }
 </script>
