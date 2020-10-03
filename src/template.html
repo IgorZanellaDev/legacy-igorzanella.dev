@@ -14,6 +14,20 @@
 	     and anything else it needs to hydrate the app and
 	     initialise the router -->
 	%sapper.scripts%
+	
+	<!-- Sapper generates a <style> tag containing critical CSS
+	     for the current page. CSS for the rest of the app is
+	     lazily loaded when it precaches secondary pages -->
+	%sapper.styles%
+
+	<!-- This contains the contents of the <svelte:head> component, if
+	     the current page has one -->
+	%sapper.head%
+</head>
+<body class="min-h-screen">
+	<!-- The application will be rendered inside this element,
+	     because `src/client.js` references it -->
+	<div id="sapper" class="min-h-screen flex flex-col">%sapper.html%</div>
 	<!--Start of Tawk.to Script-->
 	<script class="_iub_cs_activate" type="text/plain">
 		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -42,19 +56,5 @@
 	</script>
 	<script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
 	<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-
-	<!-- Sapper generates a <style> tag containing critical CSS
-	     for the current page. CSS for the rest of the app is
-	     lazily loaded when it precaches secondary pages -->
-	%sapper.styles%
-
-	<!-- This contains the contents of the <svelte:head> component, if
-	     the current page has one -->
-	%sapper.head%
-</head>
-<body class="min-h-screen">
-	<!-- The application will be rendered inside this element,
-	     because `src/client.js` references it -->
-	<div id="sapper" class="min-h-screen flex flex-col">%sapper.html%</div>
 </body>
 </html>
