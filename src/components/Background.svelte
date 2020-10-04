@@ -2,8 +2,9 @@
     import { onMount } from "svelte";
     import { colors } from "../assets/theme.js";
 
+    let canvas;
+
     onMount(() => {
-        const canvas = document.getElementById("canvas-bg");
         const c = canvas.getContext("2d");
 
         let w;
@@ -101,5 +102,5 @@
     });
 </script>
 
-<canvas id="canvas-bg" class="fixed w-screen h-screen bg-dark">
+<canvas bind:this={canvas} id="canvas-bg" class="fixed w-screen h-screen bg-dark">
 </canvas>
