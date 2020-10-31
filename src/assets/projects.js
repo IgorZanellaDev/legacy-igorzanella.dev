@@ -45,7 +45,7 @@ const projects = [
 		`
 	},
 	{
-		title: "Racing Line Motorsport (Coming out soon)",
+		title: "Racing Line Motorsport",
 		slug: "racing-line-motorsport",
 		tags: ["react", "bootstrap", "animatecss", "node", "mongodb", "aws"],
 		description: "Website crafted for my sim racing team.",
