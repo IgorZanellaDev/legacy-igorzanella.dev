@@ -59,7 +59,7 @@
 
 <MetaTags
 	description = "Hi, I am a web developer and social media manager. I work as a freelancer on commission, creating entire projects or giving advice on existing ones." 
-	descriptionCard = "Web is my job. Freelance specialized in Web Developing and Social Media."
+	descriptionCard = "Web is my job. Freelance specialized in Web Development and Social Media."
 />
 
 <div in:fade={{duration: 300}} class="overflow-hidden">
