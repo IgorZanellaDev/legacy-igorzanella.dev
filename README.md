@@ -7,6 +7,9 @@
 [![Uptime Robot Status](https://badgen.net/uptime-robot/status/m786069333-7ec939dc519848ad07bc9c0c)](https://badgen.net/uptime-robot/status/m786069333-7ec939dc519848ad07bc9c0c)
 [![Uptime Robot Status](https://badgen.net/uptime-robot/month/m786069333-7ec939dc519848ad07bc9c0c)](https://badgen.net/uptime-robot/status/m786069333-7ec939dc519848ad07bc9c0c)
 [![Uptime Robot Status](https://badgen.net/uptime-robot/response/m786069333-7ec939dc519848ad07bc9c0c)](https://badgen.net/uptime-robot/status/m786069333-7ec939dc519848ad07bc9c0c)
+# Legacy?
+Legacy because I'm slowly creating the new website, stay tuned.😉
+
 # 👨🏻‍💻igorzanella.dev ([Go to the website](https://igorzanella.dev))
 This is my portfolio website. I am a Freelance Web Developer and Social Media Manager.
 
